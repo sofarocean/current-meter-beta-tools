@@ -14,19 +14,21 @@ from iso8601 import parse_date
 from lib.api_functions import fetch_sensor_data
 from lib.binary_decoder import decode_payload_to_structs, DVT1_DATA_CHANNELS, DVT1_STRUCT_DESCRIPTION
 
+
 def convert_to_iso8601(date_str):
     try:
         parsed_date = parse_date(date_str)
         return parsed_date.strftime('%Y-%m-%dT%H:%M:%SZ')
-    except:
+    except Exception:
         raise ValueError("Invalid date/time format")
+
 
 def main():
     parser = argparse.ArgumentParser(description='Retrieve and decode DVT1 data from the Sofar API.')
     parser.add_argument('spotter_id', type=str, help='Spotter ID')
     parser.add_argument('api_token', type=str, help='API Token')
-    parser.add_argument('--start_date', type=convert_to_iso8601, help='Start date (optional)')
-    parser.add_argument('--end_date', type=convert_to_iso8601, help='End date (optional)')
+    parser.add_argument('-s', '--start_date', type=convert_to_iso8601, help='Start date (optional)')
+    parser.add_argument('-e', '--end_date', type=convert_to_iso8601, help='End date (optional)')
 
     args = parser.parse_args()
 
