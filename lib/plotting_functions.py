@@ -11,12 +11,14 @@ PLOT_WINDOW_HSIZE = 15
 PLOT_WINDOW_VSIZE = 8
 
 
-def extract_channel_data(data: dict, channel_name: str, gap_threshold_duration: timedelta = DEFAULT_GAP_THRESHOLD) -> tuple:
+def extract_channel_data(data: list, channel_name: str, gap_threshold_duration: timedelta = DEFAULT_GAP_THRESHOLD) -> tuple:
     """
     Extract channel specific data from input data.
 
     Parameters:
-    - data (dict): The input data containing timestamps and channel values.
+    - data (list): The input data containing timestamps and channel values.
+    -- This is a list of sample data dicts with 'decoded_value's.
+    -- Generally, this list will have been grouped by bristlemouth_node_id before calling this function. See group_by_node_id().
     - channel_name (str): The specific channel name to extract.
     - gap_threshold_duration (timedelta): Threshold to consider data as missing and introduce gaps.
 
@@ -28,6 +30,7 @@ def extract_channel_data(data: dict, channel_name: str, gap_threshold_duration: 
     min_values = []
     max_values = []
     std_values = []
+    n_readings_values = []
     last_timestamp = None
 
     for payload in data:
@@ -40,6 +43,7 @@ def extract_channel_data(data: dict, channel_name: str, gap_threshold_duration: 
             min_values.extend([np.nan, np.nan])
             max_values.extend([np.nan, np.nan])
             std_values.extend([np.nan, np.nan])
+            n_readings_values.extend([np.nan, np.nan])
 
         decoded_value = payload.get('decoded_value', [])
         channel_data = next((item for item in decoded_value if item['channel_name'] == channel_name), None)
@@ -50,13 +54,14 @@ def extract_channel_data(data: dict, channel_name: str, gap_threshold_duration: 
             min_values.append(channel_stats['min'])
             max_values.append(channel_stats['max'])
             std_values.append(channel_stats['stdev'])
+            n_readings_values.append(channel_stats['sample_count'])
 
         last_timestamp = timestamp
 
-    return timestamps, mean_values, min_values, max_values, std_values
+    return timestamps, mean_values, min_values, max_values, std_values, n_readings_values
 
 
-def subplot_json_channel(ax, data: dict, channel_name: str, gap_threshold_duration: timedelta = DEFAULT_GAP_THRESHOLD) -> None:
+def subplot_json_channel(ax, data: dict, channel_name: str, gap_threshold_duration: timedelta = DEFAULT_GAP_THRESHOLD) -> tuple:
     """
     Plot specific channel data on a given subplot.
 
@@ -65,20 +70,37 @@ def subplot_json_channel(ax, data: dict, channel_name: str, gap_threshold_durati
     - data (dict): The input data.
     - channel_name (str): The specific channel name to plot.
     - gap_threshold_duration (timedelta): Threshold to consider data as missing and introduce gaps.
+
+    Returns:
+    tuple: Containing lines and labels for legend.
     """
-    timestamps, mean_values, min_values, max_values, std_values = extract_channel_data(data, channel_name, gap_threshold_duration)
+    timestamps, mean_values, min_values, max_values, std_values, n_readings = extract_channel_data(data, channel_name, gap_threshold_duration)
+
     ax.plot(timestamps, mean_values, linewidth=1.5, label='Mean', color='black', marker='o', markersize=3)
     ax.plot(timestamps, min_values, linewidth=1, label='Min', color='orange', marker='o', markersize=2)
     ax.plot(timestamps, max_values, linewidth=1, label='Max', color='purple', marker='o', markersize=2)
+
     fill_upper_bound = np.array(mean_values) + np.array(std_values)
     fill_lower_bound = np.array(mean_values) - np.array(std_values)
-    ax.fill_between(timestamps, fill_lower_bound, fill_upper_bound, color='darkblue', alpha=0.2, label='Stdev')
+    ax.fill_between(timestamps, fill_lower_bound, fill_upper_bound, color='cyan', alpha=0.2, label='Stdev')
+
+    ax2 = ax.twinx()  # instantiate a second axes that shares the same x-axis
+    ax2.plot(timestamps, n_readings, color='darkgrey', linewidth=0.5, marker='o', markersize=2, zorder=-1, label='N readings')
+    ax2.set_ylabel('Reading Count', color='grey')
+    ax2.tick_params(axis='y', labelcolor='grey')  # make the 2nd y axis label text grey
+    ax2.set_ylim(bottom=0)  # Ensure minimum value of 0 for the right y-axis
+
     ax.xaxis.set_major_formatter(mdates.DateFormatter('%H:%M - %m/%d'))
     ax.set_xlabel('Timestamp')
     ax.set_ylabel(channel_name)
     ax.set_title(f'{channel_name} Over Time')
-    ax.legend(loc='upper left', bbox_to_anchor=(1, 1))
+
+    # Combine legends from both axes into a single legend
+    lines, labels = ax.get_legend_handles_labels()
+    lines2, labels2 = ax2.get_legend_handles_labels()
+
     ax.grid(which='both', linestyle='--', linewidth=0.5, alpha=0.6)
+    return lines+lines2, labels+labels2
 
 
 def group_by_node_id(data: dict) -> defaultdict:
@@ -118,12 +140,22 @@ def plot_grouped_data(grouped_data: defaultdict, channel_names: list, gap_thresh
         if len(channel_names) == 1:
             axes = [axes]
 
+        lines = []
+        labels = []
         for i, channel_name in enumerate(channel_names):
-            subplot_json_channel(axes[i], data_group, channel_name, gap_threshold_duration)
+            lines, labels = subplot_json_channel(axes[i], data_group, channel_name, gap_threshold_duration)
 
+        # Only show x axis label for bottom plot
+        for ax in axes[:-1]:
+            ax.set_xlabel("")
+
+        # Add a single legend for the entire figure
+        fig.legend(lines, labels, loc='upper right', bbox_to_anchor=(1, 1))  # moved legend a bit to the right
+        
         fig.suptitle(f'Plots for node {node_id[:6]}', fontsize=16)
         mplcursors.cursor(hover=True)
-        plt.tight_layout(rect=[0, 0, 1, 0.95])  # Adjust for the suptitle
+        plt.tight_layout(rect=(0, 0, 0.9, 1))  # Adjust for the suptitle
+        fig.subplots_adjust(hspace=0)
     # show all node plots
     plt.show()
 
