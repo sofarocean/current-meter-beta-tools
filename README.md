@@ -7,17 +7,29 @@ Python's virtualenv tool allows you to make separate environments in which you c
 By making a virtualenv specifically for running these tools, you avoid changing your base python
 distribution and potentially breaking other other codes you run.
 
+> Note: depending on your system, you many need to use `pip3` and `python3` instead of `pip` and `python` to access Python 3
 
 ### With virtualenv
-Do:
+To install or update the virtual environment:
 ```
-pip3 install virtualenv
+pip install virtualenv
 
-python3 -m venv cmbeta
+python -m venv cmbeta
 
 source cmbeta/bin/activate
-pip3 install -r requirements.txt
+pip install -r requirements.txt
 ```
+
+To activate the virtual environment (from the repository root):
+```
+$ source cmbeta/bin/activate
+```
+
+To deactivate the virtual environment:
+```
+(cmbeta)$ deactivate
+```
+
 You should now be able to run any of the scripts while in <name_of_env>
 
 ### Without virtualenv

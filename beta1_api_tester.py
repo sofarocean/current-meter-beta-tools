@@ -11,9 +11,12 @@
 import argparse
 import json
 from iso8601 import parse_date
-from lib.api_functions import fetch_sensor_data
-from lib.binary_decoder import decode_payload_to_structs, DVT1_DATA_CHANNELS, DVT1_STRUCT_DESCRIPTION
+from lib.api_functions import fetch_and_decode_sensor_data
+from lib.plotting_functions import plot_json_channels
+from lib.binary_decoder import DVT1_DATA_CHANNELS
+from lib.script_functions import get_plot_handles_for_channels, add_plot_arg_from_handles, get_channels_from_args
 
+dvt1_plot_handles = get_plot_handles_for_channels(DVT1_DATA_CHANNELS)
 
 def convert_to_iso8601(date_str):
     try:
@@ -29,21 +32,15 @@ def main():
     parser.add_argument('api_token', type=str, help='API Token')
     parser.add_argument('-s', '--start_date', type=convert_to_iso8601, help='Start date (optional)')
     parser.add_argument('-e', '--end_date', type=convert_to_iso8601, help='End date (optional)')
-
+    add_plot_arg_from_handles(parser, dvt1_plot_handles)
     args = parser.parse_args()
-
+    channels_to_plot = get_channels_from_args(args.plot_channels, dvt1_plot_handles)
     try:
-        api_response = fetch_sensor_data(args.spotter_id, args.api_token, args.start_date, args.end_date)
-        for payload in api_response.get('data', []):
-            hex_value = payload.get('value', '')
-            timestamp = payload.get('timestamp', 'Unknown')
-            try:
-                decoded_value = decode_payload_to_structs(hex_value, DVT1_DATA_CHANNELS, DVT1_STRUCT_DESCRIPTION)
-                payload['decoded_value'] = decoded_value
-            except ValueError as ve:
-                print(f"Failed to decode hex value {hex_value} at timestamp {timestamp}: {ve}")
-                continue
-        print(json.dumps(api_response, indent=4))
+        decoded_api_response = fetch_and_decode_sensor_data(args.spotter_id, args.api_token, args.start_date, args.end_date)
+        print(f"Plotting channels {channels_to_plot}")
+        plot_json_channels(decoded_api_response, channels_to_plot)
+        print(json.dumps(decoded_api_response, indent=4))
+
     except Exception as e:
         print(f"Failed to retrieve or decode data: {e}")
 

@@ -10,6 +10,7 @@
 
 import requests
 import json
+from lib.binary_decoder import decode_payload_to_structs, DVT1_DATA_CHANNELS, DVT1_STRUCT_DESCRIPTION
 import re
 
 
@@ -43,6 +44,20 @@ def fetch_sensor_data(spotter_id, api_token, start_date=None, end_date=None):
         return response.json()
     except requests.RequestException as e:
         raise Exception(f"API request failed: {e}")
+
+
+def fetch_and_decode_sensor_data(spotter_id, api_token, start_date=None, end_date=None):
+    api_response = fetch_sensor_data(spotter_id, api_token, start_date, end_date)
+    for payload in api_response.get('data', []):
+        hex_value = payload.get('value', '')
+        timestamp = payload.get('timestamp', 'Unknown')
+        try:
+            decoded_value = decode_payload_to_structs(hex_value, DVT1_DATA_CHANNELS, DVT1_STRUCT_DESCRIPTION)
+            payload['decoded_value'] = decoded_value
+        except ValueError as ve:
+            print(f"Failed to decode hex value {hex_value} at timestamp {timestamp}: {ve}")
+            continue
+    return api_response
 
 
 if __name__ == "__main__":

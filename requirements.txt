@@ -2,3 +2,5 @@ argparse
 requests
 datetime
 iso8601
+matplotlib
+numpy
