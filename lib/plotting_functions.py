@@ -3,11 +3,26 @@ import matplotlib.dates as mdates
 import mplcursors
 import numpy as np
 from datetime import datetime, timedelta
+from collections import defaultdict
 
+# Constants
 DEFAULT_GAP_THRESHOLD = timedelta(minutes=65)
 PLOT_WINDOW_HSIZE = 15
 PLOT_WINDOW_VSIZE = 8
-def extract_channel_data(data, channel_name, gap_threshold_duration=DEFAULT_GAP_THRESHOLD):
+
+
+def extract_channel_data(data: dict, channel_name: str, gap_threshold_duration: timedelta = DEFAULT_GAP_THRESHOLD) -> tuple:
+    """
+    Extract channel specific data from input data.
+
+    Parameters:
+    - data (dict): The input data containing timestamps and channel values.
+    - channel_name (str): The specific channel name to extract.
+    - gap_threshold_duration (timedelta): Threshold to consider data as missing and introduce gaps.
+
+    Returns:
+    tuple: Containing lists for timestamps, mean_values, min_values, max_values, and std_values.
+    """
     timestamps = []
     mean_values = []
     min_values = []
@@ -15,7 +30,7 @@ def extract_channel_data(data, channel_name, gap_threshold_duration=DEFAULT_GAP_
     std_values = []
     last_timestamp = None
 
-    for payload in data.get('data', []):
+    for payload in data:
         timestamp = payload.get('timestamp', None)
         if timestamp:
             timestamp = datetime.strptime(timestamp, '%Y-%m-%dT%H:%M:%S.%fZ')
@@ -41,7 +56,16 @@ def extract_channel_data(data, channel_name, gap_threshold_duration=DEFAULT_GAP_
     return timestamps, mean_values, min_values, max_values, std_values
 
 
-def subplot_json_channel(ax, data, channel_name, gap_threshold_duration=DEFAULT_GAP_THRESHOLD):
+def subplot_json_channel(ax, data: dict, channel_name: str, gap_threshold_duration: timedelta = DEFAULT_GAP_THRESHOLD) -> None:
+    """
+    Plot specific channel data on a given subplot.
+
+    Parameters:
+    - ax: The subplot axis to plot on.
+    - data (dict): The input data.
+    - channel_name (str): The specific channel name to plot.
+    - gap_threshold_duration (timedelta): Threshold to consider data as missing and introduce gaps.
+    """
     timestamps, mean_values, min_values, max_values, std_values = extract_channel_data(data, channel_name, gap_threshold_duration)
     ax.plot(timestamps, mean_values, linewidth=1.5, label='Mean', color='black', marker='o', markersize=3)
     ax.plot(timestamps, min_values, linewidth=1, label='Min', color='orange', marker='o', markersize=2)
@@ -57,13 +81,64 @@ def subplot_json_channel(ax, data, channel_name, gap_threshold_duration=DEFAULT_
     ax.grid(which='both', linestyle='--', linewidth=0.5, alpha=0.6)
 
 
-def plot_json_channels(data, channel_names, gap_threshold_duration=DEFAULT_GAP_THRESHOLD):
-    n_channels = len(channel_names)
-    fig, axes = plt.subplots(n_channels, 1, figsize=(PLOT_WINDOW_HSIZE, PLOT_WINDOW_VSIZE), sharex=True)
-    if n_channels == 1:
-        axes = [axes]
-    for i, channel_name in enumerate(channel_names):
-        subplot_json_channel(axes[i], data, channel_name, gap_threshold_duration)
-    mplcursors.cursor(hover=True)
-    plt.tight_layout(rect=[0, 0, 1, 1])
+def group_by_node_id(data: dict) -> defaultdict:
+    """
+    Group data by the bristlemouth_node_id.
+
+    Parameters:
+    - data (dict): The input data.
+
+    Returns:
+    defaultdict: Grouped data by node ID.
+    """
+    grouped_data = defaultdict(list)
+    for payload in data.get('data', []):
+        node_id = payload.get('bristlemouth_node_id', 'None')
+        grouped_data[node_id].append(payload)
+    return grouped_data
+
+
+def plot_grouped_data(grouped_data: defaultdict, channel_names: list, gap_threshold_duration: timedelta = DEFAULT_GAP_THRESHOLD) -> None:
+    """
+    Plot data for each node ID.
+
+    Parameters:
+    - grouped_data (defaultdict): Data grouped by node ID.
+    - channel_names (list): List of channel names to plot.
+    - gap_threshold_duration (timedelta): Threshold to consider data as missing and introduce gaps.
+    """
+    for node_id, data_group in grouped_data.items():
+        has_decoded_values = any([payload.get('decoded_value', []) for payload in data_group])
+
+        if not has_decoded_values:
+            continue
+
+        fig, axes = plt.subplots(len(channel_names), 1, figsize=(PLOT_WINDOW_HSIZE, PLOT_WINDOW_VSIZE), sharex=True)
+
+        if len(channel_names) == 1:
+            axes = [axes]
+
+        for i, channel_name in enumerate(channel_names):
+            subplot_json_channel(axes[i], data_group, channel_name, gap_threshold_duration)
+
+        fig.suptitle(f'Plots for node {node_id[:6]}', fontsize=16)
+        mplcursors.cursor(hover=True)
+        plt.tight_layout(rect=[0, 0, 1, 0.95])  # Adjust for the suptitle
+    # show all node plots
     plt.show()
+
+
+def plot_json_channels(data: dict, channel_names: list, gap_threshold_duration: timedelta = DEFAULT_GAP_THRESHOLD) -> None:
+    """
+    Main function to plot JSON channel data.
+
+    Parameters:
+    - data (dict): The input data, formatted as sensor-data response json with decoded-values.
+    -- see lib.api_functions.fetch_and_decode_sensor_data
+    - channel_names (list): List of channel names to plot.
+    -- see lib.binary_decoder.DVT1_DATA_CHANNELS
+    - gap_threshold_duration (timedelta): Threshold to consider data as missing and introduce gaps.
+    """
+    grouped_data = group_by_node_id(data)
+    plot_grouped_data(grouped_data, channel_names, gap_threshold_duration)
+
