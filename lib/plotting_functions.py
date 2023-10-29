@@ -151,11 +151,11 @@ def plot_grouped_data(grouped_data: defaultdict, channel_names: list, gap_thresh
 
         # Add a single legend for the entire figure
         fig.legend(lines, labels, loc='upper right', bbox_to_anchor=(1, 1))  # moved legend a bit to the right
-        
+
         fig.suptitle(f'Plots for node {node_id[:6]}', fontsize=16)
         mplcursors.cursor(hover=True)
         plt.tight_layout(rect=(0, 0, 0.9, 1))  # Adjust for the suptitle
-        fig.subplots_adjust(hspace=0)
+        fig.subplots_adjust(hspace=0.1)
     # show all node plots
     plt.show()
 
