@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 from collections import defaultdict
 
 # Constants
-DEFAULT_GAP_THRESHOLD = timedelta(minutes=65)
+DEFAULT_GAP_THRESHOLD = timedelta(minutes=75)
 PLOT_WINDOW_HSIZE = 15
 PLOT_WINDOW_VSIZE = 8
 
