@@ -36,7 +36,9 @@ def main():
     args = parser.parse_args()
     channels_to_plot = get_channels_from_args(args.plot_channels, dvt1_plot_handles)
     try:
+        print(f"Fetching data from sensor-data API...")
         decoded_api_response = fetch_and_decode_sensor_data(args.spotter_id, args.api_token, args.start_date, args.end_date)
+        print(f"Retrieved {len(decoded_api_response['data'])} samples.")
         print(f"Plotting channels {channels_to_plot}")
         plot_json_channels(decoded_api_response, channels_to_plot)
         print(json.dumps(decoded_api_response, indent=4))
