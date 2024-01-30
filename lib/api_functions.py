@@ -8,10 +8,12 @@
 # License:     Apache License, Version 2.0
 # -------------------------------------------------------------------------------
 
-import requests
 import json
-from lib.binary_decoder import decode_payload_to_structs, DVT1_DATA_CHANNELS, DVT1_STRUCT_DESCRIPTION
 import re
+import requests
+
+from lib.beta2_data import group_sensor_data, format_data_for_plotting
+from lib.binary_decoder import decode_payload_to_structs, DVT1_DATA_CHANNELS, DVT1_STRUCT_DESCRIPTION
 
 
 def validate_iso_8601_timestamp(timestamp):
@@ -52,13 +54,23 @@ def fetch_and_decode_sensor_data(spotter_id, api_token, start_date=None, end_dat
         hex_value = payload.get('value', '')
         timestamp = payload.get('timestamp', 'Unknown')
         try:
+            assert payload.get('units', None) == "hex"
             decoded_value = decode_payload_to_structs(hex_value, DVT1_DATA_CHANNELS, DVT1_STRUCT_DESCRIPTION)
             payload['decoded_value'] = decoded_value
+        except AssertionError as e:
+            print(f"Unexpected units type '{payload.get('units', None)}' for payload at time {payload.get('timestamp', 'Unknown')} is not type 'hex'. Skipping decoding.")
+            continue
         except ValueError as ve:
             print(f"Failed to decode hex value {hex_value} at timestamp {timestamp}: {ve}")
             continue
     return api_response
 
+def fetch_and_decode_beta2_data(spotter_id, api_token, start_date=None, end_date=None):
+    api_response = fetch_sensor_data(spotter_id, api_token, start_date, end_date)
+    print(json.dumps(api_response, indent=4))
+    grouped_location_data = group_sensor_data(api_response['data'])
+    formatted_data = format_data_for_plotting(grouped_location_data)
+    return formatted_data
 
 if __name__ == "__main__":
     # Sample usage
