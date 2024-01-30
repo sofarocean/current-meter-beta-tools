@@ -40,14 +40,15 @@ You should now be able to run any of the scripts while in `cmbeta`
 
 # Main Programs
 ### bin_decode_tester.py
-This is a simple script to demonstrate decoding raw binary payloads from Beta 1 Current Meter modules. 
+This is a simple script to demonstrate decoding raw binary payloads from DVT 1 Current Meter modules. 
 
 ### beta1_api_tester.py
-This script demonstrates retrieving data from the API, decoding the binary payloads, and plotting the data in `matplotlib`.
+This script demonstrates for DVT1 systems: retrieving data from the API, decoding the binary payloads, and plotting the data in `matplotlib`.
 
+### beta2_api_tester.py
+This script demonstrates for Beta 2 systems: retrieving data from the API and plotting the data in `matplotlib`.
 
-# TODOs
-- [ ] Add support and disambiguation for Beta2 systems.
+### TODOs
 - [ ] Add support for SD card parsing and plotting.
 - [ ] Add paging to api_functions for improved performance for long time spans.
 - [ ] Add saving and loading of generated data, plots, and API response data.
