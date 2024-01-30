@@ -1,0 +1,2477 @@
+{
+    "status": "success",
+    "data": [
+        {
+            "latitude": 42.3064167,
+            "longitude": 143.34685,
+            "timestamp": "2024-01-21T19:53:00.000Z",
+            "sensorPosition": null,
+            "bristlemouth_node_id": "0xc12f1ff07208adf7",
+            "units": "hex",
+            "value": "b100d5ebc63f03831d42a7df5841d3c8f840b100d47fb63fe7b5b343d9523a43eb16ca42b1005671dfc11a06b2419d755bbf75790c41b10009f301c2a64401429b09ae3f00374d41b100f62d1c4145c0ad42aef2244285706841b100d83b9ec19566bdc0be1345c1eaab2f40b100ac180bc1ece98f41993d1841e2ac5440b1000000504100007041482e60416b80193eb100191d074104b9c44104fb7d41ae2d3640",
+            "unit_type": "binary",
+            "data_type_name": "binary_hex_encoded",
+            "decoded_value": [
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 1.5540720224380493,
+                        "max": 39.3779411315918,
+                        "mean": 13.55460262298584,
+                        "stdev": 7.774514675140381
+                    },
+                    "channel_name": "Abs Speed[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 1.4257760047912598,
+                        "max": 359.4211120605469,
+                        "mean": 186.32362365722656,
+                        "stdev": 101.04476165771484
+                    },
+                    "channel_name": "Direction[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -27.930339813232422,
+                        "max": 22.252979278564453,
+                        "mean": -0.8572633862495422,
+                        "stdev": 8.77965259552002
+                    },
+                    "channel_name": "North[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -32.48733901977539,
+                        "max": 32.317039489746094,
+                        "mean": 1.3596681356430054,
+                        "stdev": 12.825927734375
+                    },
+                    "channel_name": "East[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 9.761220932006836,
+                        "max": 86.87552642822266,
+                        "mean": 41.23699188232422,
+                        "stdev": 14.527470588684082
+                    },
+                    "channel_name": "Heading[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -19.779220581054688,
+                        "max": -5.918772220611572,
+                        "mean": -12.317319869995117,
+                        "stdev": 2.7448678016662598
+                    },
+                    "channel_name": "Tilt X[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -8.693523406982422,
+                        "max": 17.989219665527344,
+                        "mean": 9.51503849029541,
+                        "stdev": 3.323051929473877
+                    },
+                    "channel_name": "Tilt Y[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 13.0,
+                        "max": 15.0,
+                        "mean": 14.011299133300781,
+                        "stdev": 0.14990393817424774
+                    },
+                    "channel_name": "Ping Count"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 8.44460391998291,
+                        "max": 24.59033966064453,
+                        "mean": 15.873783111572266,
+                        "stdev": 2.8465380668640137
+                    },
+                    "channel_name": "Abs Tilt[Deg]"
+                }
+            ]
+        },
+        {
+            "latitude": 42.3064167,
+            "longitude": 143.34685,
+            "timestamp": "2024-01-21T20:53:00.000Z",
+            "sensorPosition": null,
+            "bristlemouth_node_id": "0xc12f1ff07208adf7",
+            "units": "hex",
+            "value": "b10071ab383fefa339422418544179f80a41b100130db4409187b34311bf4a4353fcba42b100cf2cecc1ecefff4155a771bf88981b41b1009c61eec165851942f46fba3eaf8f4741b100c3f33f43b8af9d436d947743bc13b841b100a698073fec9d9241c0bfd540cc333940b1008811d1c1842b603e0f4e4ec117e35d40b10000005041000070412417604179022c3eb1007426ef4034d1f2415bc96c41e2b05f40",
+            "unit_type": "binary",
+            "data_type_name": "binary_hex_encoded",
+            "decoded_value": [
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 0.7213659882545471,
+                        "max": 46.410091400146484,
+                        "mean": 13.25589370727539,
+                        "stdev": 8.685662269592285
+                    },
+                    "channel_name": "Abs Speed[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 5.626595973968506,
+                        "max": 359.0591125488281,
+                        "mean": 202.74635314941406,
+                        "stdev": 93.4928207397461
+                    },
+                    "channel_name": "Direction[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -29.521879196166992,
+                        "max": 31.992149353027344,
+                        "mean": -0.9439595341682434,
+                        "stdev": 9.724739074707031
+                    },
+                    "channel_name": "North[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -29.79766082763672,
+                        "max": 38.38026809692383,
+                        "mean": 0.36413538455963135,
+                        "stdev": 12.472579002380371
+                    },
+                    "channel_name": "East[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 191.9521942138672,
+                        "max": 315.372802734375,
+                        "mean": 247.5797882080078,
+                        "stdev": 23.00963592529297
+                    },
+                    "channel_name": "Heading[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 0.5296729803085327,
+                        "max": 18.327110290527344,
+                        "mean": 6.679656982421875,
+                        "stdev": 2.8937864303588867
+                    },
+                    "channel_name": "Tilt X[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -26.133560180664062,
+                        "max": 0.21891599893569946,
+                        "mean": -12.894057273864746,
+                        "stdev": 3.4669854640960693
+                    },
+                    "channel_name": "Tilt Y[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 13.0,
+                        "max": 15.0,
+                        "mean": 14.00564956665039,
+                        "stdev": 0.1679781824350357
+                    },
+                    "channel_name": "Ping Count"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 7.473443984985352,
+                        "max": 30.352149963378906,
+                        "mean": 14.799159049987793,
+                        "stdev": 3.495171070098877
+                    },
+                    "channel_name": "Abs Tilt[Deg]"
+                }
+            ]
+        },
+        {
+            "latitude": 42.3064,
+            "longitude": 143.3468333,
+            "timestamp": "2024-01-21T21:53:01.000Z",
+            "sensorPosition": null,
+            "bristlemouth_node_id": "0xc12f1ff07208adf7",
+            "units": "hex",
+            "value": "b1005490153f94fc14424e965241fe15f940b100b6ad8140a728b34355ec4343ea39d242b10082b994c189440642ec32473f65411a41b100d9dfe4c1603f1042b4114bbfa6113d41b1000c735c4377bd924327357f430c478041b100bd6f0a40faa76c41db71f140dabf0740b100a2a2b8c1ecc03ec17bb983c1533c0640b1000000504100007041dce85f41b58e4b3eb1001b1e5241fb51d24112749141b91e1640",
+            "unit_type": "binary",
+            "data_type_name": "binary_hex_encoded",
+            "decoded_value": [
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 0.5842335224151611,
+                        "max": 37.24665832519531,
+                        "mean": 13.16169548034668,
+                        "stdev": 7.783934593200684
+                    },
+                    "channel_name": "Abs Speed[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 4.052454948425293,
+                        "max": 358.3175964355469,
+                        "mean": 195.9231719970703,
+                        "stdev": 105.11311340332031
+                    },
+                    "channel_name": "Direction[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -18.590579986572266,
+                        "max": 33.56692886352539,
+                        "mean": 0.778120756149292,
+                        "stdev": 9.640965461730957
+                    },
+                    "channel_name": "North[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -28.60930061340332,
+                        "max": 36.0618896484375,
+                        "mean": -0.7932388782501221,
+                        "stdev": 11.816808700561523
+                    },
+                    "channel_name": "East[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 220.44940185546875,
+                        "max": 293.4801940917969,
+                        "mean": 255.20762634277344,
+                        "stdev": 16.034690856933594
+                    },
+                    "channel_name": "Heading[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 2.1630699634552,
+                        "max": 14.791009902954102,
+                        "mean": 7.5451483726501465,
+                        "stdev": 2.121084690093994
+                    },
+                    "channel_name": "Tilt X[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -23.079410552978516,
+                        "max": -11.922100067138672,
+                        "mean": -16.465566635131836,
+                        "stdev": 2.0974318981170654
+                    },
+                    "channel_name": "Tilt Y[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 13.0,
+                        "max": 15.0,
+                        "mean": 13.99435043334961,
+                        "stdev": 0.19878657162189484
+                    },
+                    "channel_name": "Ping Count"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 13.132349967956543,
+                        "max": 26.290029525756836,
+                        "mean": 18.18167495727539,
+                        "stdev": 2.345625162124634
+                    },
+                    "channel_name": "Abs Tilt[Deg]"
+                }
+            ]
+        },
+        {
+            "latitude": 42.3064,
+            "longitude": 143.3468333,
+            "timestamp": "2024-01-21T22:53:00.000Z",
+            "sensorPosition": null,
+            "bristlemouth_node_id": "0xc12f1ff07208adf7",
+            "units": "hex",
+            "value": "b100a1802440c8ef4342f89f8941d3702641b10098c20440071fb3431c75434380d0ca42b100c21dc6c181521342422d0f3f7b401e41b100b3ec3dc24c4f2e4232b153bf82ca8b41b10072c71a423b8f1043d0e2b242df7abe41b100a8c0a1c1d8b6b9415b1737c068aed540b1007e6e4e40758ee841f1fe8541104f7940b1000000504100007041482e60416b80193eb10011f02d414c490d4296c592417b266140",
+            "unit_type": "binary",
+            "data_type_name": "binary_hex_encoded",
+            "decoded_value": [
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 2.5703508853912354,
+                        "max": 48.984161376953125,
+                        "mean": 17.203109741210938,
+                        "stdev": 10.402544975280762
+                    },
+                    "channel_name": "Abs Speed[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 2.0743770599365234,
+                        "max": 358.2424011230469,
+                        "mean": 195.45745849609375,
+                        "stdev": 101.4072265625
+                    },
+                    "channel_name": "Direction[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -24.764530181884766,
+                        "max": 36.830570220947266,
+                        "mean": 0.5592843294143677,
+                        "stdev": 9.890742301940918
+                    },
+                    "channel_name": "North[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -47.48115158081055,
+                        "max": 43.57743835449219,
+                        "mean": -0.8269225358963013,
+                        "stdev": 17.473880767822266
+                    },
+                    "channel_name": "East[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 38.69477081298828,
+                        "max": 144.5594940185547,
+                        "mean": 89.4429931640625,
+                        "stdev": 23.809995651245117
+                    },
+                    "channel_name": "Heading[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -20.219070434570312,
+                        "max": 23.214279174804688,
+                        "mean": -2.8608005046844482,
+                        "stdev": 6.677539825439453
+                    },
+                    "channel_name": "Tilt X[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 3.225493907928467,
+                        "max": 29.06955909729004,
+                        "mean": 16.749483108520508,
+                        "stdev": 3.8954505920410156
+                    },
+                    "channel_name": "Tilt Y[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 13.0,
+                        "max": 15.0,
+                        "mean": 14.011299133300781,
+                        "stdev": 0.14990393817424774
+                    },
+                    "channel_name": "Ping Count"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 10.871109962463379,
+                        "max": 35.32157897949219,
+                        "mean": 18.346477508544922,
+                        "stdev": 3.5179736614227295
+                    },
+                    "channel_name": "Abs Tilt[Deg]"
+                }
+            ]
+        },
+        {
+            "latitude": 42.3064,
+            "longitude": 143.3468,
+            "timestamp": "2024-01-21T23:53:00.000Z",
+            "sensorPosition": null,
+            "bristlemouth_node_id": "0xc12f1ff07208adf7",
+            "units": "hex",
+            "value": "b100f434ae3f86af45426a658441832a1341b100433aa63f024ab34322f740430ad6d542b100318ef2c104a20042f9b0f83f484f2341b1003b6a45c2ddd51042f79bac3d803f7d41b100258aa742fcd81843b9dae042d5d06041b10055b3f5c06c6cb541e2d4603f4f8cc240b1003d1b3641b3180942e9ef9941e8b67b40b10000005041000070412417604179022c3eb100e420364144170a42aa0ea241d1e67340",
+            "unit_type": "binary",
+            "data_type_name": "binary_hex_encoded",
+            "decoded_value": [
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 1.3609910011291504,
+                        "max": 49.421409606933594,
+                        "mean": 16.549518585205078,
+                        "stdev": 9.19787883758545
+                    },
+                    "channel_name": "Abs Speed[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 1.29865300655365,
+                        "max": 358.57818603515625,
+                        "mean": 192.96536254882812,
+                        "stdev": 106.91804504394531
+                    },
+                    "channel_name": "Direction[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -30.319429397583008,
+                        "max": 32.15821838378906,
+                        "mean": 1.9429007768630981,
+                        "stdev": 10.206855773925781
+                    },
+                    "channel_name": "North[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -49.35374069213867,
+                        "max": 36.2088508605957,
+                        "mean": 0.08428185433149338,
+                        "stdev": 15.8280029296875
+                    },
+                    "channel_name": "East[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 83.76981353759766,
+                        "max": 152.84759521484375,
+                        "mean": 112.42719268798828,
+                        "stdev": 14.050984382629395
+                    },
+                    "channel_name": "Heading[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -7.678141117095947,
+                        "max": 22.677940368652344,
+                        "mean": 0.8782483339309692,
+                        "stdev": 6.079627513885498
+                    },
+                    "channel_name": "Tilt X[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 11.3816499710083,
+                        "max": 34.27412033081055,
+                        "mean": 19.242143630981445,
+                        "stdev": 3.9330387115478516
+                    },
+                    "channel_name": "Tilt Y[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 13.0,
+                        "max": 15.0,
+                        "mean": 14.00564956665039,
+                        "stdev": 0.1679781824350357
+                    },
+                    "channel_name": "Ping Count"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 11.38302993774414,
+                        "max": 34.52272033691406,
+                        "mean": 20.257160186767578,
+                        "stdev": 3.8109629154205322
+                    },
+                    "channel_name": "Abs Tilt[Deg]"
+                }
+            ]
+        },
+        {
+            "latitude": 42.3064167,
+            "longitude": 143.3467833,
+            "timestamp": "2024-01-22T00:53:00.000Z",
+            "sensorPosition": null,
+            "bristlemouth_node_id": "0xc12f1ff07208adf7",
+            "units": "hex",
+            "value": "b100bdfd813f6337404273788141aa191c41b1008c863c3edc16b24397d44143a22ad142b100826deac1813e29429290b63fb0161d41b100cb9c0ac2835718425a76e33dcda98041b100b0267a4247321f435969e342b8ab8b41b100a55a74c12bf301423cd4b23f5a12f840b10021fd0b4180650542ce2ba9419e0f8240b10000005041000070416fa35f41194b723eb10066498941780b0842dea4b5414dcf5940",
+            "unit_type": "binary",
+            "data_type_name": "binary_hex_encoded",
+            "decoded_value": [
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 1.01555597782135,
+                        "max": 48.0540885925293,
+                        "mean": 16.183813095092773,
+                        "stdev": 9.756265640258789
+                    },
+                    "channel_name": "Abs Speed[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 0.1841070055961609,
+                        "max": 356.1785888671875,
+                        "mean": 193.83042907714844,
+                        "stdev": 104.58326721191406
+                    },
+                    "channel_name": "Direction[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -29.303470611572266,
+                        "max": 42.311038970947266,
+                        "mean": 1.4262869358062744,
+                        "stdev": 9.818038940429688
+                    },
+                    "channel_name": "North[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -34.65311813354492,
+                        "max": 38.0854606628418,
+                        "mean": 0.1110655814409256,
+                        "stdev": 16.082910537719727
+                    },
+                    "channel_name": "East[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 62.53778076171875,
+                        "max": 159.19639587402344,
+                        "mean": 113.70575714111328,
+                        "stdev": 17.458847045898438
+                    },
+                    "channel_name": "Heading[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -15.272130012512207,
+                        "max": 32.48746871948242,
+                        "mean": 1.397101879119873,
+                        "stdev": 7.752240180969238
+                    },
+                    "channel_name": "Tilt X[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 8.749299049377441,
+                        "max": 33.34912109375,
+                        "mean": 21.14638900756836,
+                        "stdev": 4.064406394958496
+                    },
+                    "channel_name": "Tilt Y[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 13.0,
+                        "max": 15.0,
+                        "mean": 13.977400779724121,
+                        "stdev": 0.23661459982395172
+                    },
+                    "channel_name": "Ping Count"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 17.160839080810547,
+                        "max": 34.011199951171875,
+                        "mean": 22.705501556396484,
+                        "stdev": 3.403277635574341
+                    },
+                    "channel_name": "Abs Tilt[Deg]"
+                }
+            ]
+        },
+        {
+            "latitude": 42.3064167,
+            "longitude": 143.3468,
+            "timestamp": "2024-01-22T01:53:00.000Z",
+            "sensorPosition": null,
+            "bristlemouth_node_id": "0xc12f1ff07208adf7",
+            "units": "hex",
+            "value": "b100cdc8773fff382a4260c37541073b0b41b1002b685a3e8087b343fdf53843d699e142b1004486b1c10c8510427f2c3d401a831841b100a21729c2cd810a42f918b53d65fe6841b1006945a142f4ed1e432bbae14212cc8941b10090c0cdc029398141e7acb43e0bd98b40b1002c8104415041e341fbe78c41582c5940b1000000504100007041482e60416b80193eb1007d912e41e2c1e341e8c49141065d4940",
+            "unit_type": "binary",
+            "data_type_name": "binary_hex_encoded",
+            "decoded_value": [
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 0.967907726764679,
+                        "max": 42.555660247802734,
+                        "mean": 15.360198974609375,
+                        "stdev": 8.701910972595215
+                    },
+                    "channel_name": "Abs Speed[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 0.21328799426555634,
+                        "max": 359.05859375,
+                        "mean": 184.9608917236328,
+                        "stdev": 112.80046081542969
+                    },
+                    "channel_name": "Direction[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -22.19055938720703,
+                        "max": 36.12992858886719,
+                        "mean": 2.955840826034546,
+                        "stdev": 9.532007217407227
+                    },
+                    "channel_name": "North[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -42.27307891845703,
+                        "max": 34.62675857543945,
+                        "mean": 0.08842653781175613,
+                        "stdev": 14.562108039855957
+                    },
+                    "channel_name": "East[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 80.63556671142578,
+                        "max": 158.92950439453125,
+                        "mean": 112.86360931396484,
+                        "stdev": 17.22464370727539
+                    },
+                    "channel_name": "Heading[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -6.429756164550781,
+                        "max": 16.152910232543945,
+                        "mean": 0.35288164019584656,
+                        "stdev": 4.37024450302124
+                    },
+                    "channel_name": "Tilt X[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 8.281536102294922,
+                        "max": 28.406890869140625,
+                        "mean": 17.613271713256836,
+                        "stdev": 3.393331527709961
+                    },
+                    "channel_name": "Tilt Y[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 13.0,
+                        "max": 15.0,
+                        "mean": 14.011299133300781,
+                        "stdev": 0.14990393817424774
+                    },
+                    "channel_name": "Ping Count"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 10.91051959991455,
+                        "max": 28.469669342041016,
+                        "mean": 18.221145629882812,
+                        "stdev": 3.1463027000427246
+                    },
+                    "channel_name": "Abs Tilt[Deg]"
+                }
+            ]
+        },
+        {
+            "latitude": 42.3063833,
+            "longitude": 143.3468833,
+            "timestamp": "2024-01-22T02:53:00.000Z",
+            "sensorPosition": null,
+            "bristlemouth_node_id": "0xc12f1ff07208adf7",
+            "units": "hex",
+            "value": "b1007b6d0b3fb6013a427fa48341ea9b0f41b100fe8d0f3e8340b143fa4d494371d7b942b100b11020c210cce141b37eb4bf75b92f41b100b1a1f6c18cb510420f0f1bbeddf77141b100b8d03b43f9e78143a1725443bf3f4041b100cf7732415625fd41fbd4b14167d27040b100d35fcdc11dd7f6c0a2c891c13f494040b1000000504100007041482e60416b80193eb10061ce94410b8f1642ead5e541816e7140",
+            "unit_type": "binary",
+            "data_type_name": "binary_hex_encoded",
+            "decoded_value": [
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 0.5446392893791199,
+                        "max": 46.501670837402344,
+                        "mean": 16.455320358276367,
+                        "stdev": 8.975564956665039
+                    },
+                    "channel_name": "Abs Speed[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 0.14019009470939636,
+                        "max": 354.5039978027344,
+                        "mean": 201.30459594726562,
+                        "stdev": 92.92078399658203
+                    },
+                    "channel_name": "Direction[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -40.016300201416016,
+                        "max": 28.224639892578125,
+                        "mean": -1.4101165533065796,
+                        "stdev": 10.98277759552002
+                    },
+                    "channel_name": "North[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -30.828950881958008,
+                        "max": 36.17729187011719,
+                        "mean": -0.15142463147640228,
+                        "stdev": 15.123013496398926
+                    },
+                    "channel_name": "East[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 187.8153076171875,
+                        "max": 259.8122863769531,
+                        "mean": 212.44776916503906,
+                        "stdev": 12.015563011169434
+                    },
+                    "channel_name": "Heading[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 11.154250144958496,
+                        "max": 31.643230438232422,
+                        "mean": 22.228994369506836,
+                        "stdev": 3.7628419399261475
+                    },
+                    "channel_name": "Tilt X[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -25.671789169311523,
+                        "max": -7.713758945465088,
+                        "mean": -18.222965240478516,
+                        "stdev": 3.0044705867767334
+                    },
+                    "channel_name": "Tilt Y[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 13.0,
+                        "max": 15.0,
+                        "mean": 14.011299133300781,
+                        "stdev": 0.14990393817424774
+                    },
+                    "channel_name": "Ping Count"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 18.600770950317383,
+                        "max": 37.63969039916992,
+                        "mean": 28.729450225830078,
+                        "stdev": 3.772369623184204
+                    },
+                    "channel_name": "Abs Tilt[Deg]"
+                }
+            ]
+        },
+        {
+            "latitude": 42.3064167,
+            "longitude": 143.3469,
+            "timestamp": "2024-01-22T03:52:59.000Z",
+            "sensorPosition": null,
+            "bristlemouth_node_id": "0xc12f1ff07208adf7",
+            "units": "hex",
+            "value": "b10064cf9d3e534854427a7f6a41b0aa0d41b100364bfe40c5d8b043ab9b37436d82bd42b100e79d05c288faaa41fe9baebf49351941b100748944c2b2f42442efc5f53f30fa5f41b10046ec9240816eb343f18428437b72ad42b1008205fac1b0d5db413aff054118d16941b10013cfb0c1d2e98a416ca70fc102ef3e41b10000006041000070416c456041c92d043eb100b62203418bdd0b42f814af414ee19c40",
+            "unit_type": "binary",
+            "data_type_name": "binary_hex_encoded",
+            "decoded_value": [
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 0.3082228899002075,
+                        "max": 53.07062911987305,
+                        "mean": 14.656122207641602,
+                        "stdev": 8.854171752929688
+                    },
+                    "channel_name": "Abs Speed[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 7.946681022644043,
+                        "max": 353.6935119628906,
+                        "mean": 183.6080780029297,
+                        "stdev": 94.7547378540039
+                    },
+                    "channel_name": "Direction[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -33.40420150756836,
+                        "max": 21.372329711914062,
+                        "mean": -1.364135503768921,
+                        "stdev": 9.575509071350098
+                    },
+                    "channel_name": "North[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -49.13423156738281,
+                        "max": 41.23896026611328,
+                        "mean": 1.9201029539108276,
+                        "stdev": 13.998580932617188
+                    },
+                    "channel_name": "East[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 4.591341972351074,
+                        "max": 358.8633117675781,
+                        "mean": 168.51930236816406,
+                        "stdev": 86.72359466552734
+                    },
+                    "channel_name": "Heading[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -31.252689361572266,
+                        "max": 27.479339599609375,
+                        "mean": 8.374811172485352,
+                        "stdev": 14.613548278808594
+                    },
+                    "channel_name": "Tilt X[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -22.101110458374023,
+                        "max": 17.36417007446289,
+                        "mean": -8.978374481201172,
+                        "stdev": 11.933351516723633
+                    },
+                    "channel_name": "Tilt Y[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 14.0,
+                        "max": 15.0,
+                        "mean": 14.016948699951172,
+                        "stdev": 0.1290809065103531
+                    },
+                    "channel_name": "Ping Count"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 8.195974349975586,
+                        "max": 34.96635055541992,
+                        "mean": 21.885238647460938,
+                        "stdev": 4.90250301361084
+                    },
+                    "channel_name": "Abs Tilt[Deg]"
+                }
+            ]
+        },
+        {
+            "latitude": 42.3064167,
+            "longitude": 143.3468833,
+            "timestamp": "2024-01-22T04:52:58.000Z",
+            "sensorPosition": null,
+            "bristlemouth_node_id": "0xc12f1ff07208adf7",
+            "units": "hex",
+            "value": "b100c408b33f082f2a42a4d9834143920f41b10037c70240d5b9b24364fb46434af6ae42b1002d8612c20d71f441a66a6bc0d2b03341b100297c29c23b2d0f426d6993bf3d816841b10088c53943858487436e245a43c4788641b100012681404512dd41713259416ab38640b10041fddac13e7b37c0e6a570c1cf808140b1000000504100007041dce85f41b58e4b3eb10088462a412c710b424508a4417f969440",
+            "unit_type": "binary",
+            "data_type_name": "binary_hex_encoded",
+            "decoded_value": [
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 1.398705005645752,
+                        "max": 42.545928955078125,
+                        "mean": 16.48126983642578,
+                        "stdev": 8.9732084274292
+                    },
+                    "channel_name": "Abs Speed[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 2.0434091091156006,
+                        "max": 357.4518127441406,
+                        "mean": 198.98199462890625,
+                        "stdev": 87.48103332519531
+                    },
+                    "channel_name": "Direction[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -36.63103103637695,
+                        "max": 30.555200576782227,
+                        "mean": -3.678384304046631,
+                        "stdev": 11.230669021606445
+                    },
+                    "channel_name": "North[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -42.37125015258789,
+                        "max": 35.79417037963867,
+                        "mean": -1.151654839515686,
+                        "stdev": 14.5315523147583
+                    },
+                    "channel_name": "East[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 185.7716064453125,
+                        "max": 271.0353088378906,
+                        "mean": 218.14230346679688,
+                        "stdev": 16.80896759033203
+                    },
+                    "channel_name": "Heading[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 4.035889148712158,
+                        "max": 27.633920669555664,
+                        "mean": 13.574814796447754,
+                        "stdev": 4.2094011306762695
+                    },
+                    "channel_name": "Tilt X[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -27.373659133911133,
+                        "max": -2.8668971061706543,
+                        "mean": -15.040502548217773,
+                        "stdev": 4.046973705291748
+                    },
+                    "channel_name": "Tilt Y[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 13.0,
+                        "max": 15.0,
+                        "mean": 13.99435043334961,
+                        "stdev": 0.19878657162189484
+                    },
+                    "channel_name": "Ping Count"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 10.642219543457031,
+                        "max": 34.86051940917969,
+                        "mean": 20.504037857055664,
+                        "stdev": 4.643371105194092
+                    },
+                    "channel_name": "Abs Tilt[Deg]"
+                }
+            ]
+        },
+        {
+            "latitude": 42.3064333,
+            "longitude": 143.34675,
+            "timestamp": "2024-01-22T05:52:58.000Z",
+            "sensorPosition": null,
+            "bristlemouth_node_id": "0xc12f1ff07208adf7",
+            "units": "hex",
+            "value": "b100812c5d3f948d364207c481410f4d0941b1006c9ef63e5bbbac4393f33943ec0ca142b100dedfb2c160c8de418fbda8c0eb440441b100c01b1fc257122942a216e2bf83917641b100cf7e89421bae4e4394a403436228b041b10010238dc145efb44100a48240d94ac940b100501865c02da1fc4186d43141fe2dba40b1000000504100007041dce85f4179022c3eb1000649db4035950542121a604191208e40",
+            "unit_type": "binary",
+            "data_type_name": "binary_hex_encoded",
+            "decoded_value": [
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 0.863960325717926,
+                        "max": 45.63825988769531,
+                        "mean": 16.22071647644043,
+                        "stdev": 8.581313133239746
+                    },
+                    "channel_name": "Abs Speed[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 0.48167741298675537,
+                        "max": 345.4637145996094,
+                        "mean": 185.9514617919922,
+                        "stdev": 80.52523803710938
+                    },
+                    "channel_name": "Direction[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -22.359310150146484,
+                        "max": 27.84783935546875,
+                        "mean": -5.273139476776123,
+                        "stdev": 8.266825675964355
+                    },
+                    "channel_name": "North[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -39.777099609375,
+                        "max": 42.26791000366211,
+                        "mean": -1.7663156986236572,
+                        "stdev": 15.41052532196045
+                    },
+                    "channel_name": "East[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 68.74767303466797,
+                        "max": 206.6800994873047,
+                        "mean": 131.64288330078125,
+                        "stdev": 22.019718170166016
+                    },
+                    "channel_name": "Heading[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -17.642120361328125,
+                        "max": 22.616830825805664,
+                        "mean": 4.08251953125,
+                        "stdev": 6.29038667678833
+                    },
+                    "channel_name": "Tilt X[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -3.579608917236328,
+                        "max": 31.578699111938477,
+                        "mean": 11.114385604858398,
+                        "stdev": 5.818114280700684
+                    },
+                    "channel_name": "Tilt Y[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 13.0,
+                        "max": 15.0,
+                        "mean": 13.99435043334961,
+                        "stdev": 0.1679781824350357
+                    },
+                    "channel_name": "Ping Count"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 6.852663993835449,
+                        "max": 33.39570999145508,
+                        "mean": 14.006364822387695,
+                        "stdev": 4.4414753913879395
+                    },
+                    "channel_name": "Abs Tilt[Deg]"
+                }
+            ]
+        },
+        {
+            "latitude": 42.3064333,
+            "longitude": 143.3467667,
+            "timestamp": "2024-01-22T06:52:59.000Z",
+            "sensorPosition": null,
+            "bristlemouth_node_id": "0xc12f1ff07208adf7",
+            "units": "hex",
+            "value": "b100b6059d3e8c337642f1d686415e382c41b100b4040940a1e8b34386c5424348b89f42b100d58671c256ce8d41d996d8c0e7714041b100890903c210461c42704699bed1846741b10073f2c142a7e1814367c53d43efaa1d42b100e60592c03b82f7416a0d4641b975e840b10022b74ac187a28d41beac8fbeaa19ba40b10000005041000070410000604130b3593eb1005438ac40ce280242ef7a6841ce92ad40",
+            "unit_type": "binary",
+            "data_type_name": "binary_hex_encoded",
+            "decoded_value": [
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 0.3066841959953308,
+                        "max": 61.55033874511719,
+                        "mean": 16.854951858520508,
+                        "stdev": 10.763761520385742
+                    },
+                    "channel_name": "Abs Speed[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 2.1409120559692383,
+                        "max": 359.8174133300781,
+                        "mean": 194.77157592773438,
+                        "stdev": 79.85992431640625
+                    },
+                    "channel_name": "Direction[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -60.38167190551758,
+                        "max": 17.725749969482422,
+                        "mean": -6.76841402053833,
+                        "stdev": 12.02780818939209
+                    },
+                    "channel_name": "North[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -32.75931167602539,
+                        "max": 39.06842041015625,
+                        "mean": -0.2993655204772949,
+                        "stdev": 14.469925880432129
+                    },
+                    "channel_name": "East[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 96.9735336303711,
+                        "max": 259.7629089355469,
+                        "mean": 189.77110290527344,
+                        "stdev": 39.416927337646484
+                    },
+                    "channel_name": "Heading[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -4.563220024108887,
+                        "max": 30.938589096069336,
+                        "mean": 12.378274917602539,
+                        "stdev": 7.264370441436768
+                    },
+                    "channel_name": "Tilt X[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -12.669710159301758,
+                        "max": 17.70435905456543,
+                        "mean": -0.28061479330062866,
+                        "stdev": 5.8156328201293945
+                    },
+                    "channel_name": "Tilt Y[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 13.0,
+                        "max": 15.0,
+                        "mean": 14.0,
+                        "stdev": 0.21259760856628418
+                    },
+                    "channel_name": "Ping Count"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 5.381875991821289,
+                        "max": 32.53984832763672,
+                        "mean": 14.530013084411621,
+                        "stdev": 5.42417049407959
+                    },
+                    "channel_name": "Abs Tilt[Deg]"
+                }
+            ]
+        },
+        {
+            "latitude": 42.3064667,
+            "longitude": 143.34675,
+            "timestamp": "2024-01-22T07:52:58.000Z",
+            "sensorPosition": null,
+            "bristlemouth_node_id": "0xc12f1ff07208adf7",
+            "units": "hex",
+            "value": "b100a4b62d3fccb75142a7f0674134f21141b100d1f6bd40a32bb343acdd2c43743dae42b1001d5acbc105289c41976f2ac046cdff40b1000a3f4ec298a321427307d23f92226d41b100b455c540b769af43f87a5243dc007342b1005e17a5c17149da4138d0e6403237da40b1009d2e52c12827c6417d1c663e921edd40b10000005041000070412417604179022c3eb100df8a3940366afb41ff87344103829140",
+            "unit_type": "binary",
+            "data_type_name": "binary_hex_encoded",
+            "decoded_value": [
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 0.6785681247711182,
+                        "max": 52.42948913574219,
+                        "mean": 14.49625301361084,
+                        "stdev": 9.121631622314453
+                    },
+                    "channel_name": "Abs Speed[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 5.9363789558410645,
+                        "max": 358.3409118652344,
+                        "mean": 172.86590576171875,
+                        "stdev": 87.12002563476562
+                    },
+                    "channel_name": "Direction[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -25.41900062561035,
+                        "max": 19.519540786743164,
+                        "mean": -2.6630609035491943,
+                        "stdev": 7.993807792663574
+                    },
+                    "channel_name": "North[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -51.561561584472656,
+                        "max": 40.409759521484375,
+                        "mean": 1.6408523321151733,
+                        "stdev": 14.820940017700195
+                    },
+                    "channel_name": "East[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 6.166711807250977,
+                        "max": 350.8258972167969,
+                        "mean": 210.4803466796875,
+                        "stdev": 60.75083923339844
+                    },
+                    "channel_name": "Heading[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -20.636409759521484,
+                        "max": 27.285860061645508,
+                        "mean": 7.212917327880859,
+                        "stdev": 6.81923770904541
+                    },
+                    "channel_name": "Tilt X[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -13.136380195617676,
+                        "max": 24.769119262695312,
+                        "mean": 0.22471804916858673,
+                        "stdev": 6.909981727600098
+                    },
+                    "channel_name": "Tilt Y[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 13.0,
+                        "max": 15.0,
+                        "mean": 14.00564956665039,
+                        "stdev": 0.1679781824350357
+                    },
+                    "channel_name": "Ping Count"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 2.8991010189056396,
+                        "max": 31.426860809326172,
+                        "mean": 11.283202171325684,
+                        "stdev": 4.547120571136475
+                    },
+                    "channel_name": "Abs Tilt[Deg]"
+                }
+            ]
+        },
+        {
+            "latitude": 42.3064833,
+            "longitude": 143.3467333,
+            "timestamp": "2024-01-22T08:52:59.000Z",
+            "sensorPosition": null,
+            "bristlemouth_node_id": "0xc12f1ff07208adf7",
+            "units": "hex",
+            "value": "b1006315313fd05b7c42b4be834124d02541b1008d0b8241045fb343ff1e2f4328ae9c42b100264701c2767d9341c343aac0dccc0d41b10041e52cc201bb5842ba863a3f7dbf8341b100c84414408175b24355a290437c048142b100bb0f61c1a3759a41ecdb8e40bdb0d840b100c9139fc1930c8d41c02c87c0a049de40b100000050410000704124176041b58e4b3eb10036b83d3f9234dc4114f51d41b525be40",
+            "unit_type": "binary",
+            "data_type_name": "binary_hex_encoded",
+            "decoded_value": [
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 0.6917325854301453,
+                        "max": 63.08966064453125,
+                        "mean": 16.468116760253906,
+                        "stdev": 10.36331558227539
+                    },
+                    "channel_name": "Abs Speed[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 16.255640029907227,
+                        "max": 358.7423095703125,
+                        "mean": 175.12107849121094,
+                        "stdev": 78.34014892578125
+                    },
+                    "channel_name": "Direction[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -32.319480895996094,
+                        "max": 18.436260223388672,
+                        "mean": -5.32077169418335,
+                        "stdev": 8.86251449584961
+                    },
+                    "channel_name": "North[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -43.223880767822266,
+                        "max": 54.182621002197266,
+                        "mean": 0.7286182641983032,
+                        "stdev": 16.4685001373291
+                    },
+                    "channel_name": "East[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 2.3166980743408203,
+                        "max": 356.9179992675781,
+                        "mean": 289.2682189941406,
+                        "stdev": 64.50875854492188
+                    },
+                    "channel_name": "Heading[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -14.066340446472168,
+                        "max": 19.30743980407715,
+                        "mean": 4.464345932006836,
+                        "stdev": 6.7715744972229
+                    },
+                    "channel_name": "Tilt X[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -19.884660720825195,
+                        "max": 17.631139755249023,
+                        "mean": -4.224212646484375,
+                        "stdev": 6.9464874267578125
+                    },
+                    "channel_name": "Tilt Y[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 13.0,
+                        "max": 15.0,
+                        "mean": 14.00564956665039,
+                        "stdev": 0.19878657162189484
+                    },
+                    "channel_name": "Ping Count"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 0.7410920858383179,
+                        "max": 27.52566909790039,
+                        "mean": 9.872333526611328,
+                        "stdev": 5.942102909088135
+                    },
+                    "channel_name": "Abs Tilt[Deg]"
+                }
+            ]
+        },
+        {
+            "latitude": 42.30645,
+            "longitude": 143.34675,
+            "timestamp": "2024-01-22T09:53:02.000Z",
+            "sensorPosition": null,
+            "bristlemouth_node_id": "0xc12f1ff07208adf7",
+            "units": "hex",
+            "value": "b1006ee75d3f8498554279d86e410ca60f41b100d3c30c416463b343e5744543fa4fad42b100a13ecbc14c2669419c0384c0c7e20641b100639154c2a0c633423c9b0bbf46a36a41b1002a49d942c08b6543cfce1943f2cce141b100c0783ac1bf31ab41e243c5401e72c540b1006728cfc0ded9d14180f00841f536c740b1000000504100007041000060419f883c3eb10038b0b640ee2be541c4065541b9115e40",
+            "unit_type": "binary",
+            "data_type_name": "binary_hex_encoded",
+            "decoded_value": [
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 0.8668125867843628,
+                        "max": 53.39894104003906,
+                        "mean": 14.927849769592285,
+                        "stdev": 8.978038787841797
+                    },
+                    "channel_name": "Abs Speed[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 8.797808647155762,
+                        "max": 358.7764892578125,
+                        "mean": 197.4566192626953,
+                        "stdev": 86.65620422363281
+                    },
+                    "channel_name": "Direction[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -25.405580520629883,
+                        "max": 14.571849822998047,
+                        "mean": -4.12544059753418,
+                        "stdev": 8.430365562438965
+                    },
+                    "channel_name": "North[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -53.1419792175293,
+                        "max": 44.9439697265625,
+                        "mean": -0.545337438583374,
+                        "stdev": 14.664861679077148
+                    },
+                    "channel_name": "East[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 108.64289855957031,
+                        "max": 229.5458984375,
+                        "mean": 153.80784606933594,
+                        "stdev": 28.22507095336914
+                    },
+                    "channel_name": "Heading[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -11.65447998046875,
+                        "max": 21.399290084838867,
+                        "mean": 6.164536476135254,
+                        "stdev": 6.170180320739746
+                    },
+                    "channel_name": "Tilt X[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -6.473681926727295,
+                        "max": 26.231380462646484,
+                        "mean": 8.5587158203125,
+                        "stdev": 6.22545862197876
+                    },
+                    "channel_name": "Tilt Y[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 13.0,
+                        "max": 15.0,
+                        "mean": 14.0,
+                        "stdev": 0.18411491811275482
+                    },
+                    "channel_name": "Ping Count"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 5.709011077880859,
+                        "max": 28.64645004272461,
+                        "mean": 13.314151763916016,
+                        "stdev": 3.469831705093384
+                    },
+                    "channel_name": "Abs Tilt[Deg]"
+                }
+            ]
+        },
+        {
+            "latitude": 42.30645,
+            "longitude": 143.3467833,
+            "timestamp": "2024-01-22T10:53:02.000Z",
+            "sensorPosition": null,
+            "bristlemouth_node_id": "0xc12f1ff07208adf7",
+            "units": "hex",
+            "value": "b100ed27243fdfff8b4296967d41ff913841b10074d889419da9a7433fb836432cf1aa42b1001b589fc11bd89141293c21c021cde140b10030ac8ac2ef0f44429ab547bfe9c79041b1009031f942bf768f43d2c7674392ec2142b1000b2936c14792204266fe3641556bd040b10070b639c1838609421df8a8bf6719fe40b10000005041000070416c456041c53a2b3eb10072b3b84079522342884266416ef7b640",
+            "unit_type": "binary",
+            "data_type_name": "binary_hex_encoded",
+            "decoded_value": [
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 0.6412342190742493,
+                        "max": 69.99974822998047,
+                        "mean": 15.849264144897461,
+                        "stdev": 11.535643577575684
+                    },
+                    "channel_name": "Abs Speed[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 17.230690002441406,
+                        "max": 335.3251037597656,
+                        "mean": 182.71971130371094,
+                        "stdev": 85.47103881835938
+                    },
+                    "channel_name": "Direction[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -19.918020248413086,
+                        "max": 18.230520248413086,
+                        "mean": -2.519296884536743,
+                        "stdev": 7.056290149688721
+                    },
+                    "channel_name": "North[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -69.3363037109375,
+                        "max": 49.015560150146484,
+                        "mean": -0.7801147699356079,
+                        "stdev": 18.097612380981445
+                    },
+                    "channel_name": "East[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 124.5968017578125,
+                        "max": 286.9277038574219,
+                        "mean": 231.78054809570312,
+                        "stdev": 40.48102569580078
+                    },
+                    "channel_name": "Heading[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -11.38502025604248,
+                        "max": 40.14284896850586,
+                        "mean": 11.437108993530273,
+                        "stdev": 6.513102054595947
+                    },
+                    "channel_name": "Tilt X[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -11.607040405273438,
+                        "max": 34.3813591003418,
+                        "mean": -1.320071816444397,
+                        "stdev": 7.940600872039795
+                    },
+                    "channel_name": "Tilt Y[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 13.0,
+                        "max": 15.0,
+                        "mean": 14.016948699951172,
+                        "stdev": 0.16721637547016144
+                    },
+                    "channel_name": "Ping Count"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 5.771904945373535,
+                        "max": 40.83053970336914,
+                        "mean": 14.391242980957031,
+                        "stdev": 5.717703819274902
+                    },
+                    "channel_name": "Abs Tilt[Deg]"
+                }
+            ]
+        },
+        {
+            "latitude": 42.3064667,
+            "longitude": 143.3468833,
+            "timestamp": "2024-01-22T11:53:01.000Z",
+            "sensorPosition": null,
+            "bristlemouth_node_id": "0xc12f1ff07208adf7",
+            "units": "hex",
+            "value": "b1006fa8403ff88b72423c19924187153f41b10016bfcd3fe70bb243acf63b436687bd42b100e342e4c123a79c41324417c0f6ac1141b1007f3b37c2cf976c4276345b40681c9b41b100153de74272799943a2a45443c4bdf941b100e29fdcc079bbe04184da0241f255c840b100c7c016c250993341e19559c1112f0b41b1000000504100007041482e60416b80193eb100460a7640ac162a426edd8941bc830641",
+            "unit_type": "binary",
+            "data_type_name": "binary_hex_encoded",
+            "decoded_value": [
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 0.7525700926780701,
+                        "max": 60.636688232421875,
+                        "mean": 18.26232147216797,
+                        "stdev": 11.942755699157715
+                    },
+                    "channel_name": "Abs Speed[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 1.6073939800262451,
+                        "max": 356.0929870605469,
+                        "mean": 187.96356201171875,
+                        "stdev": 94.76445007324219
+                    },
+                    "channel_name": "Direction[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -28.53265953063965,
+                        "max": 19.58160972595215,
+                        "mean": -2.363537311553955,
+                        "stdev": 9.104726791381836
+                    },
+                    "channel_name": "North[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -45.808101654052734,
+                        "max": 59.148250579833984,
+                        "mean": 3.425076961517334,
+                        "stdev": 19.388870239257812
+                    },
+                    "channel_name": "East[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 115.61930084228516,
+                        "max": 306.94879150390625,
+                        "mean": 212.64309692382812,
+                        "stdev": 31.21765899658203
+                    },
+                    "channel_name": "Heading[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -6.894516944885254,
+                        "max": 28.09153938293457,
+                        "mean": 8.178348541259766,
+                        "stdev": 6.260491371154785
+                    },
+                    "channel_name": "Tilt X[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -37.68825912475586,
+                        "max": 11.224929809570312,
+                        "mean": -13.599091529846191,
+                        "stdev": 8.698990821838379
+                    },
+                    "channel_name": "Tilt Y[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 13.0,
+                        "max": 15.0,
+                        "mean": 14.011299133300781,
+                        "stdev": 0.14990393817424774
+                    },
+                    "channel_name": "Ping Count"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 3.844377040863037,
+                        "max": 42.52214050292969,
+                        "mean": 17.23311996459961,
+                        "stdev": 8.407161712646484
+                    },
+                    "channel_name": "Abs Tilt[Deg]"
+                }
+            ]
+        },
+        {
+            "latitude": 42.3064167,
+            "longitude": 143.3469167,
+            "timestamp": "2024-01-22T12:53:02.000Z",
+            "sensorPosition": null,
+            "bristlemouth_node_id": "0xc12f1ff07208adf7",
+            "units": "hex",
+            "value": "b100151cd03f30f88942f673a64180aa5d41b100186d0e41d90db243e7ea464351d6c142b1008b6c15c2a340e941133a65bf33633d41b10013586cc238028342c91aa93f02acaf41b10055c112436861924304034b43c91baa41b100a722bc4024913c42560da6411f2de340b100a2772fc24d86a5bfd83c92c16922a240b1000000504100007041482e6041a52d3c3eb1003c143441a4565242ce2edf41b942f340",
+            "unit_type": "binary",
+            "data_type_name": "binary_hex_encoded",
+            "decoded_value": [
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 1.6258569955825806,
+                        "max": 68.9847412109375,
+                        "mean": 20.806621551513672,
+                        "stdev": 13.8541259765625
+                    },
+                    "channel_name": "Abs Speed[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 8.901634216308594,
+                        "max": 356.1081848144531,
+                        "mean": 198.91758728027344,
+                        "stdev": 96.91858673095703
+                    },
+                    "channel_name": "Direction[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -37.35599899291992,
+                        "max": 29.15656089782715,
+                        "mean": -0.8954173922538757,
+                        "stdev": 11.836718559265137
+                    },
+                    "channel_name": "North[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -59.08600997924805,
+                        "max": 65.50433349609375,
+                        "mean": 1.3211299180984497,
+                        "stdev": 21.958988189697266
+                    },
+                    "channel_name": "East[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 146.7552032470703,
+                        "max": 292.760986328125,
+                        "mean": 203.01177978515625,
+                        "stdev": 21.263566970825195
+                    },
+                    "channel_name": "Heading[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 5.87923002243042,
+                        "max": 47.14173889160156,
+                        "mean": 20.756511688232422,
+                        "stdev": 7.099257946014404
+                    },
+                    "channel_name": "Tilt X[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -43.86682891845703,
+                        "max": -1.2931610345840454,
+                        "mean": -18.279708862304688,
+                        "stdev": 5.066700458526611
+                    },
+                    "channel_name": "Tilt Y[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 13.0,
+                        "max": 15.0,
+                        "mean": 14.011299133300781,
+                        "stdev": 0.1837678700685501
+                    },
+                    "channel_name": "Ping Count"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 11.254940032958984,
+                        "max": 52.58460998535156,
+                        "mean": 27.89785385131836,
+                        "stdev": 7.601894855499268
+                    },
+                    "channel_name": "Abs Tilt[Deg]"
+                }
+            ]
+        },
+        {
+            "latitude": 42.3064,
+            "longitude": 143.3469,
+            "timestamp": "2024-01-22T13:53:01.000Z",
+            "sensorPosition": null,
+            "bristlemouth_node_id": "0xc12f1ff07208adf7",
+            "units": "hex",
+            "value": "b100e9474840512e8b422501c1410d0c5a41b10084bd833fc6e4b343ebda40438961da42b100d6bf12c29fb0344218c92840b0f96841b1004be52bc278ba82425157904017e7b741b100c4e12043d41b824355164743e67f8341b100976e1e41fbc823425582c141d746e440b100fa5bdac1e49e9cbf2eb393c118c57b40b10000005041000070412417604179022c3eb10073d76e41a4ad3e429ea4f341bd9de840",
+            "unit_type": "binary",
+            "data_type_name": "binary_hex_encoded",
+            "decoded_value": [
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 3.1293890476226807,
+                        "max": 69.59046173095703,
+                        "mean": 24.125558853149414,
+                        "stdev": 13.627942085266113
+                    },
+                    "channel_name": "Abs Speed[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 1.0292210578918457,
+                        "max": 359.78729248046875,
+                        "mean": 192.8551483154297,
+                        "stdev": 109.19049835205078
+                    },
+                    "channel_name": "Direction[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -36.687339782714844,
+                        "max": 45.172481536865234,
+                        "mean": 2.6372737884521484,
+                        "stdev": 14.560958862304688
+                    },
+                    "channel_name": "North[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -42.97391891479492,
+                        "max": 65.36419677734375,
+                        "mean": 4.5106587409973145,
+                        "stdev": 22.987836837768555
+                    },
+                    "channel_name": "East[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 160.88189697265625,
+                        "max": 260.2174072265625,
+                        "mean": 199.0872344970703,
+                        "stdev": 16.437450408935547
+                    },
+                    "channel_name": "Heading[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 9.901999473571777,
+                        "max": 40.94626998901367,
+                        "mean": 24.18863868713379,
+                        "stdev": 7.133647441864014
+                    },
+                    "channel_name": "Tilt X[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -27.294910430908203,
+                        "max": -1.2235989570617676,
+                        "mean": -18.46249008178711,
+                        "stdev": 3.9339046478271484
+                    },
+                    "channel_name": "Tilt Y[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 13.0,
+                        "max": 15.0,
+                        "mean": 14.00564956665039,
+                        "stdev": 0.1679781824350357
+                    },
+                    "channel_name": "Ping Count"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 14.927599906921387,
+                        "max": 47.66957092285156,
+                        "mean": 30.455379486083984,
+                        "stdev": 7.2692551612854
+                    },
+                    "channel_name": "Abs Tilt[Deg]"
+                }
+            ]
+        },
+        {
+            "latitude": 42.3063833,
+            "longitude": 143.3468833,
+            "timestamp": "2024-01-22T14:53:01.000Z",
+            "sensorPosition": null,
+            "bristlemouth_node_id": "0xc12f1ff07208adf7",
+            "units": "hex",
+            "value": "b100453a063f20e64342b880934152072241b10095b96440c945b34342d23b4391c0cf42b100f9c020c2337312426976a6be00f56541b10095d431c285bc2b4273b71c406e917241b100aee73443476280436b785343a1975541b1009cc42d414e310b420951b44135a18c40b100f1a9d6c1c7cbc6c015eb92c1ad6b2b40b100000050410000704100006041e6ef193eb10017d467416b851f420a40e84170408840",
+            "unit_type": "binary",
+            "data_type_name": "binary_hex_encoded",
+            "decoded_value": [
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 0.5243266224861145,
+                        "max": 48.9747314453125,
+                        "mean": 18.437850952148438,
+                        "stdev": 10.126787185668945
+                    },
+                    "channel_name": "Abs Speed[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 3.573827028274536,
+                        "max": 358.5451965332031,
+                        "mean": 187.82131958007812,
+                        "stdev": 103.87610626220703
+                    },
+                    "channel_name": "Direction[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -40.18844985961914,
+                        "max": 36.61249923706055,
+                        "mean": -0.3251221477985382,
+                        "stdev": 14.372314453125
+                    },
+                    "channel_name": "North[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -44.45759963989258,
+                        "max": 42.93410110473633,
+                        "mean": 2.4486968517303467,
+                        "stdev": 15.160505294799805
+                    },
+                    "channel_name": "East[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 180.90499877929688,
+                        "max": 256.7677917480469,
+                        "mean": 211.4703826904297,
+                        "stdev": 13.349518775939941
+                    },
+                    "channel_name": "Heading[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 10.86050033569336,
+                        "max": 34.79814910888672,
+                        "mean": 22.539567947387695,
+                        "stdev": 4.394678592681885
+                    },
+                    "channel_name": "Tilt X[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -26.832979202270508,
+                        "max": -6.212375164031982,
+                        "mean": -18.36478614807129,
+                        "stdev": 2.6784470081329346
+                    },
+                    "channel_name": "Tilt Y[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 13.0,
+                        "max": 15.0,
+                        "mean": 14.0,
+                        "stdev": 0.15032920241355896
+                    },
+                    "channel_name": "Ping Count"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 14.489279747009277,
+                        "max": 39.88029098510742,
+                        "mean": 29.031269073486328,
+                        "stdev": 4.257865905761719
+                    },
+                    "channel_name": "Abs Tilt[Deg]"
+                }
+            ]
+        },
+        {
+            "latitude": 42.3063833,
+            "longitude": 143.3468833,
+            "timestamp": "2024-01-22T15:53:01.000Z",
+            "sensorPosition": null,
+            "bristlemouth_node_id": "0xc12f1ff07208adf7",
+            "units": "hex",
+            "value": "b10023416c3faf9c8042302aae419bcf4641b1002904ce3f3d84b343d96f1c43de48cf42b1009fc214c2a083fe417a4ad83d54525341b100d9bc02c2099353428000144198899941b10035ef2f43da0c8943c6654d4324517041b100e2781f41a1a71342fdb1ab41c3dfb640b10034bfd3c165e0e5c039dd93c198724c40b1000000504100007041482e60416b80193eb100d53e4f417ab332426d60e241c398bb40",
+            "unit_type": "binary",
+            "data_type_name": "binary_hex_encoded",
+            "decoded_value": [
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 0.9228689074516296,
+                        "max": 64.30602264404297,
+                        "mean": 21.770599365234375,
+                        "stdev": 12.425684928894043
+                    },
+                    "channel_name": "Abs Speed[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 1.6095019578933716,
+                        "max": 359.0331115722656,
+                        "mean": 156.43690490722656,
+                        "stdev": 103.64231872558594
+                    },
+                    "channel_name": "Direction[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -37.190059661865234,
+                        "max": 31.81427001953125,
+                        "mean": 0.10561080276966095,
+                        "stdev": 13.207599639892578
+                    },
+                    "channel_name": "North[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -32.68442153930664,
+                        "max": 52.89358901977539,
+                        "mean": 9.2501220703125,
+                        "stdev": 19.192184448242188
+                    },
+                    "channel_name": "East[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 175.9344024658203,
+                        "max": 274.10040283203125,
+                        "mean": 205.39755249023438,
+                        "stdev": 15.01980972290039
+                    },
+                    "channel_name": "Heading[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 9.967012405395508,
+                        "max": 36.913700103759766,
+                        "mean": 21.4619083404541,
+                        "stdev": 5.71481466293335
+                    },
+                    "channel_name": "Tilt X[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -26.468360900878906,
+                        "max": -7.1836419105529785,
+                        "mean": -18.48301887512207,
+                        "stdev": 3.1944942474365234
+                    },
+                    "channel_name": "Tilt Y[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 13.0,
+                        "max": 15.0,
+                        "mean": 14.011299133300781,
+                        "stdev": 0.14990393817424774
+                    },
+                    "channel_name": "Ping Count"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 12.952839851379395,
+                        "max": 44.675270080566406,
+                        "mean": 28.297082901000977,
+                        "stdev": 5.86239767074585
+                    },
+                    "channel_name": "Abs Tilt[Deg]"
+                }
+            ]
+        },
+        {
+            "latitude": 42.3063833,
+            "longitude": 143.34685,
+            "timestamp": "2024-01-22T16:53:01.000Z",
+            "sensorPosition": null,
+            "bristlemouth_node_id": "0xc12f1ff07208adf7",
+            "units": "hex",
+            "value": "b100b152f33fd4658242ce1b8b4165ec3541b1006c68e93ebad3b343165430437729d142b100f6ff6ec2533f36421cdc9f3fa7fe4d41b100b5bd0dc2972b3c42758797403bda7841b10054443843b96c89438bc35b4332ce8041b100197f5541d21a0d42712baf41bbc88a40b10097edc7c13bc41fc1865c8cc189fa1e40b10000005041000070410000604130b3593eb1006c1b924149541f423841e0415e2a8340",
+            "unit_type": "binary",
+            "data_type_name": "binary_hex_encoded",
+            "decoded_value": [
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 1.9009610414505005,
+                        "max": 65.19888305664062,
+                        "mean": 17.38857650756836,
+                        "stdev": 11.370213508605957
+                    },
+                    "channel_name": "Abs Speed[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 0.45587480068206787,
+                        "max": 359.65411376953125,
+                        "mean": 176.32846069335938,
+                        "stdev": 104.58098602294922
+                    },
+                    "channel_name": "Direction[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -59.749961853027344,
+                        "max": 45.56184005737305,
+                        "mean": 1.2489047050476074,
+                        "stdev": 12.87467098236084
+                    },
+                    "channel_name": "North[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -35.43526077270508,
+                        "max": 47.04256820678711,
+                        "mean": 4.73528528213501,
+                        "stdev": 15.553278923034668
+                    },
+                    "channel_name": "East[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 184.26690673828125,
+                        "max": 274.8493957519531,
+                        "mean": 219.7638397216797,
+                        "stdev": 16.10068130493164
+                    },
+                    "channel_name": "Heading[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 13.34352970123291,
+                        "max": 35.27619171142578,
+                        "mean": 21.896211624145508,
+                        "stdev": 4.337003231048584
+                    },
+                    "channel_name": "Tilt X[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -24.991010665893555,
+                        "max": -9.985407829284668,
+                        "mean": -17.545177459716797,
+                        "stdev": 2.484041452407837
+                    },
+                    "channel_name": "Tilt Y[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 13.0,
+                        "max": 15.0,
+                        "mean": 14.0,
+                        "stdev": 0.21259760856628418
+                    },
+                    "channel_name": "Ping Count"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 18.263389587402344,
+                        "max": 39.83230972290039,
+                        "mean": 28.031845092773438,
+                        "stdev": 4.098921775817871
+                    },
+                    "channel_name": "Abs Tilt[Deg]"
+                }
+            ]
+        },
+        {
+            "latitude": 42.3063833,
+            "longitude": 143.34685,
+            "timestamp": "2024-01-22T17:53:01.000Z",
+            "sensorPosition": null,
+            "bristlemouth_node_id": "0xc12f1ff07208adf7",
+            "units": "hex",
+            "value": "b100d461af3fb7a56442fb418a4192012941b100c86ca44037aab34376243043ae52da42b1003b36dec1d96218422353c03f192a3d41b10094cd3cc2c1684e42dc0b9840eac37a41b100005f3243518a9143e89a5a4387348041b100fa280041732b094272a5854141de9b40b10030f5b9c136f287c0f40e7ac1b2b64640b1000000504100007041dce85f41b58e4b3eb10032f72241690c20422359b74120d5a340",
+            "unit_type": "binary",
+            "data_type_name": "binary_hex_encoded",
+            "decoded_value": [
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 1.3701729774475098,
+                        "max": 57.16183090209961,
+                        "mean": 17.282217025756836,
+                        "stdev": 10.562883377075195
+                    },
+                    "channel_name": "Abs Speed[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 5.138278961181641,
+                        "max": 359.3298034667969,
+                        "mean": 176.14242553710938,
+                        "stdev": 109.16148376464844
+                    },
+                    "channel_name": "Direction[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -27.776479721069336,
+                        "max": 38.09653091430664,
+                        "mean": 1.5025371313095093,
+                        "stdev": 11.82277774810791
+                    },
+                    "channel_name": "North[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -47.20075988769531,
+                        "max": 51.602298736572266,
+                        "mean": 4.751447677612305,
+                        "stdev": 15.672830581665039
+                    },
+                    "channel_name": "East[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 178.37109375,
+                        "max": 291.0805969238281,
+                        "mean": 218.6051025390625,
+                        "stdev": 16.02564811706543
+                    },
+                    "channel_name": "Heading[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 8.010004043579102,
+                        "max": 34.29243087768555,
+                        "mean": 16.70578384399414,
+                        "stdev": 4.870880603790283
+                    },
+                    "channel_name": "Tilt X[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -23.244720458984375,
+                        "max": -4.248316764831543,
+                        "mean": -15.628650665283203,
+                        "stdev": 3.10490083694458
+                    },
+                    "channel_name": "Tilt Y[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 13.0,
+                        "max": 15.0,
+                        "mean": 13.99435043334961,
+                        "stdev": 0.19878657162189484
+                    },
+                    "channel_name": "Ping Count"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 10.18535041809082,
+                        "max": 40.01211929321289,
+                        "mean": 22.91852378845215,
+                        "stdev": 5.1197662353515625
+                    },
+                    "channel_name": "Abs Tilt[Deg]"
+                }
+            ]
+        },
+        {
+            "latitude": 42.3063833,
+            "longitude": 143.3468167,
+            "timestamp": "2024-01-22T18:53:00.000Z",
+            "sensorPosition": null,
+            "bristlemouth_node_id": "0xc12f1ff07208adf7",
+            "units": "hex",
+            "value": "b100e013a33f7734844204beb441b5624a41b1007dea00408618b24375333f430899c642b100471802c29e674542a4b2413ff9796241b1003fe982c2469f59425f0a8cbf821fad41b1005c75c33f6f71ad43fb1f7f43ed5d7342b1005a3b18c2b1f3e8414a20ef4039342941b100eb0520c29f8ea7418fb5b4c1aa791541b1000000504100007041000060419f883c3eb100cdb58c41b0522c42007dd941847da740",
+            "unit_type": "binary",
+            "data_type_name": "binary_hex_encoded",
+            "decoded_value": [
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 1.2740440368652344,
+                        "max": 66.10247039794922,
+                        "mean": 22.59278106689453,
+                        "stdev": 12.64909839630127
+                    },
+                    "channel_name": "Abs Speed[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 2.0143120288848877,
+                        "max": 356.19158935546875,
+                        "mean": 191.2010040283203,
+                        "stdev": 99.29888916015625
+                    },
+                    "channel_name": "Direction[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -32.52370834350586,
+                        "max": 49.35118865966797,
+                        "mean": 0.7566320896148682,
+                        "stdev": 14.154778480529785
+                    },
+                    "channel_name": "North[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -65.45555877685547,
+                        "max": 54.405540466308594,
+                        "mean": -1.0940665006637573,
+                        "stdev": 21.640384674072266
+                    },
+                    "channel_name": "East[cm/s]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 1.5270190238952637,
+                        "max": 346.8861999511719,
+                        "mean": 255.1249237060547,
+                        "stdev": 60.84172439575195
+                    },
+                    "channel_name": "Heading[Deg.M]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -38.057960510253906,
+                        "max": 29.118989944458008,
+                        "mean": 7.472691535949707,
+                        "stdev": 10.575249671936035
+                    },
+                    "channel_name": "Tilt X[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": -40.00577926635742,
+                        "max": 20.944639205932617,
+                        "mean": -22.588651657104492,
+                        "stdev": 9.342203140258789
+                    },
+                    "channel_name": "Tilt Y[Deg]"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 13.0,
+                        "max": 15.0,
+                        "mean": 14.0,
+                        "stdev": 0.18411491811275482
+                    },
+                    "channel_name": "Ping Count"
+                },
+                {
+                    "data": {
+                        "sample_count": 177,
+                        "min": 17.588769912719727,
+                        "max": 43.08074951171875,
+                        "mean": 27.18603515625,
+                        "stdev": 5.234071731567383
+                    },
+                    "channel_name": "Abs Tilt[Deg]"
+                }
+            ]
+        }
+    ]
+}

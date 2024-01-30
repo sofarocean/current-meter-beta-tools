@@ -40,7 +40,7 @@ You should now be able to run any of the scripts while in `cmbeta`
 
 # Main Programs
 ### bin_decode_tester.py
-This is a simple script to demonstrate decoding raw binary payloads from beta Current Meter modules. 
+This is a simple script to demonstrate decoding raw binary payloads from Beta 1 Current Meter modules. 
 
 ### beta1_api_tester.py
 This script demonstrates retrieving data from the API, decoding the binary payloads, and plotting the data in `matplotlib`.
