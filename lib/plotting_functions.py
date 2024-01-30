@@ -55,7 +55,8 @@ def extract_channel_data(data: list, channel_name: str, gap_threshold_duration: 
             if plot_min_max: # Beta 2 sample aggregation does not report min
                 min_values.append(channel_stats['min'])
                 max_values.append(channel_stats['max'])
-            std_values.append(channel_stats['stdev'])
+            if 'stdev' in channel_stats:
+                std_values.append(channel_stats['stdev'])
             n_readings_values.append(channel_stats['sample_count'])
 
         last_timestamp = timestamp
@@ -83,9 +84,10 @@ def subplot_json_channel(ax, data: dict, channel_name: str, gap_threshold_durati
         ax.plot(timestamps, min_values, linewidth=1, label='Min', color='orange', marker='o', markersize=2)
         ax.plot(timestamps, max_values, linewidth=1, label='Max', color='purple', marker='o', markersize=2)
 
-    fill_upper_bound = np.array(mean_values) + np.array(std_values)
-    fill_lower_bound = np.array(mean_values) - np.array(std_values)
-    ax.fill_between(timestamps, fill_lower_bound, fill_upper_bound, color='cyan', alpha=0.2, label='Stdev')
+    if len(mean_values) == len(std_values):
+        fill_upper_bound = np.array(mean_values) + np.array(std_values)
+        fill_lower_bound = np.array(mean_values) - np.array(std_values)
+        ax.fill_between(timestamps, fill_lower_bound, fill_upper_bound, color='cyan', alpha=0.2, label='Stdev')
 
     ax2 = ax.twinx()  # instantiate a second axes that shares the same x-axis
     ax2.plot(timestamps, n_readings, color='darkgrey', linewidth=0.5, marker='o', markersize=2, zorder=-1, label='N readings')

@@ -36,7 +36,8 @@ DVT1_DATA_CHANNELS = [
 BETA_2_DATA_CHANNELS = [
     "Abs Speed[cm/s]",
     "Direction[Deg.M]",
-    "Abs Tilt[Deg]"
+    "Abs Tilt[Deg]",
+    "Temperature[ºC]"
 ]
 
 # Sample Hex Payload
