@@ -61,7 +61,8 @@ def add_plot_arg_from_handles(parser, handle_list):
     parser.add_argument("-pc", "--plot_channels",
                         choices=valid_choices,
                         nargs='*',
-                        help=help_string)
+                        help=help_string,
+                        default='all')
 
 
 def get_channels_from_args(args, full_plot_handles):

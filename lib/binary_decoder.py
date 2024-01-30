@@ -32,6 +32,13 @@ DVT1_DATA_CHANNELS = [
     "Abs Tilt[Deg]"
 ]
 
+# Anderaa Adapter Beta 2 Data Channels
+BETA_2_DATA_CHANNELS = [
+    "Abs Speed[cm/s]",
+    "Direction[Deg.M]",
+    "Abs Tilt[Deg]"
+]
+
 # Sample Hex Payload
 SAMPLE_HEX_DATA = (
     "b1005abdf33fae96cb43b261f042f4199442b100784ecc3bf7acb343b71f48432059e042"

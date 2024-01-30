@@ -11,7 +11,7 @@ PLOT_WINDOW_HSIZE = 15
 PLOT_WINDOW_VSIZE = 8
 
 
-def extract_channel_data(data: list, channel_name: str, gap_threshold_duration: timedelta = DEFAULT_GAP_THRESHOLD) -> tuple:
+def extract_channel_data(data: list, channel_name: str, gap_threshold_duration: timedelta = DEFAULT_GAP_THRESHOLD, plot_min_max: bool = True) -> tuple:
     """
     Extract channel specific data from input data.
 
@@ -40,8 +40,9 @@ def extract_channel_data(data: list, channel_name: str, gap_threshold_duration: 
         if last_timestamp and (timestamp - last_timestamp > gap_threshold_duration):
             timestamps.extend([last_timestamp, timestamp])
             mean_values.extend([np.nan, np.nan])
-            min_values.extend([np.nan, np.nan])
-            max_values.extend([np.nan, np.nan])
+            if plot_min_max:
+                min_values.extend([np.nan, np.nan])
+                max_values.extend([np.nan, np.nan])
             std_values.extend([np.nan, np.nan])
             n_readings_values.extend([np.nan, np.nan])
 
@@ -51,8 +52,9 @@ def extract_channel_data(data: list, channel_name: str, gap_threshold_duration: 
             channel_stats = channel_data['data']
             timestamps.append(timestamp)
             mean_values.append(channel_stats['mean'])
-            min_values.append(channel_stats['min'])
-            max_values.append(channel_stats['max'])
+            if plot_min_max: # Beta 2 sample aggregation does not report min
+                min_values.append(channel_stats['min'])
+                max_values.append(channel_stats['max'])
             std_values.append(channel_stats['stdev'])
             n_readings_values.append(channel_stats['sample_count'])
 
@@ -61,7 +63,7 @@ def extract_channel_data(data: list, channel_name: str, gap_threshold_duration: 
     return timestamps, mean_values, min_values, max_values, std_values, n_readings_values
 
 
-def subplot_json_channel(ax, data: dict, channel_name: str, gap_threshold_duration: timedelta = DEFAULT_GAP_THRESHOLD) -> tuple:
+def subplot_json_channel(ax, data: dict, channel_name: str, gap_threshold_duration: timedelta = DEFAULT_GAP_THRESHOLD, plot_min_max: bool = True) -> tuple:
     """
     Plot specific channel data on a given subplot.
 
@@ -74,11 +76,12 @@ def subplot_json_channel(ax, data: dict, channel_name: str, gap_threshold_durati
     Returns:
     tuple: Containing lines and labels for legend.
     """
-    timestamps, mean_values, min_values, max_values, std_values, n_readings = extract_channel_data(data, channel_name, gap_threshold_duration)
+    timestamps, mean_values, min_values, max_values, std_values, n_readings = extract_channel_data(data, channel_name, gap_threshold_duration, plot_min_max)
 
     ax.plot(timestamps, mean_values, linewidth=1.5, label='Mean', color='black', marker='o', markersize=3)
-    ax.plot(timestamps, min_values, linewidth=1, label='Min', color='orange', marker='o', markersize=2)
-    ax.plot(timestamps, max_values, linewidth=1, label='Max', color='purple', marker='o', markersize=2)
+    if plot_min_max:
+        ax.plot(timestamps, min_values, linewidth=1, label='Min', color='orange', marker='o', markersize=2)
+        ax.plot(timestamps, max_values, linewidth=1, label='Max', color='purple', marker='o', markersize=2)
 
     fill_upper_bound = np.array(mean_values) + np.array(std_values)
     fill_lower_bound = np.array(mean_values) - np.array(std_values)
@@ -119,8 +122,23 @@ def group_by_node_id(data: dict) -> defaultdict:
         grouped_data[node_id].append(payload)
     return grouped_data
 
+def group_by_sensor_position(data: dict) -> defaultdict:
+    """
+    Group data by the sensor_position in a bus-topology network.
 
-def plot_grouped_data(grouped_data: defaultdict, channel_names: list, gap_threshold_duration: timedelta = DEFAULT_GAP_THRESHOLD) -> None:
+    Parameters:
+    - data (dict): The input data.
+
+    Returns:
+    defaultdict: Grouped data by sensor position.
+    """
+    grouped_data = defaultdict(list)
+    for payload in data.get('data', []):
+        sensor_position = payload.get('sensorPosition', 'None')
+        grouped_data[sensor_position].append(payload)
+    return grouped_data
+
+def plot_grouped_data(grouped_data: defaultdict, channel_names: list, gap_threshold_duration: timedelta = DEFAULT_GAP_THRESHOLD, plot_min_max: bool = True) -> None:
     """
     Plot data for each node ID.
 
@@ -129,7 +147,7 @@ def plot_grouped_data(grouped_data: defaultdict, channel_names: list, gap_thresh
     - channel_names (list): List of channel names to plot.
     - gap_threshold_duration (timedelta): Threshold to consider data as missing and introduce gaps.
     """
-    for node_id, data_group in grouped_data.items():
+    for sensor_position, data_group in grouped_data.items():
         has_decoded_values = any([payload.get('decoded_value', []) for payload in data_group])
 
         if not has_decoded_values:
@@ -143,7 +161,7 @@ def plot_grouped_data(grouped_data: defaultdict, channel_names: list, gap_thresh
         lines = []
         labels = []
         for i, channel_name in enumerate(channel_names):
-            lines, labels = subplot_json_channel(axes[i], data_group, channel_name, gap_threshold_duration)
+            lines, labels = subplot_json_channel(axes[i], data_group, channel_name, gap_threshold_duration, plot_min_max)
 
         # Only show x axis label for bottom plot
         for ax in axes[:-1]:
@@ -152,7 +170,7 @@ def plot_grouped_data(grouped_data: defaultdict, channel_names: list, gap_thresh
         # Add a single legend for the entire figure
         fig.legend(lines, labels, loc='upper right', bbox_to_anchor=(1, 1))  # moved legend a bit to the right
 
-        fig.suptitle(f'Plots for node {node_id[:6]}', fontsize=16)
+        fig.suptitle(f'Plots for sensor {sensor_position}', fontsize=16)
         mplcursors.cursor(hover=True)
         plt.tight_layout(rect=(0, 0, 0.9, 1))  # Adjust for the suptitle
         fig.subplots_adjust(hspace=0.1)
@@ -172,5 +190,19 @@ def plot_json_channels(data: dict, channel_names: list, gap_threshold_duration: 
     - gap_threshold_duration (timedelta): Threshold to consider data as missing and introduce gaps.
     """
     grouped_data = group_by_node_id(data)
-    plot_grouped_data(grouped_data, channel_names, gap_threshold_duration)
+    plot_grouped_data(grouped_data, channel_names, gap_threshold_duration, True)
+
+def plot_beta2_json_channels(data: dict, channel_names: list, gap_threshold_duration: timedelta = DEFAULT_GAP_THRESHOLD) -> None:
+    """
+    Main function to plot JSON channel data for Beta 2 systems.
+
+    Parameters:
+    - data (dict): The input data, formatted as sensor-data response json with decoded-values.
+    -- see lib.api_functions.fetch_and_decode_sensor_data
+    - channel_names (list): List of channel names to plot.
+    -- see lib.binary_decoder.DVT1_DATA_CHANNELS
+    - gap_threshold_duration (timedelta): Threshold to consider data as missing and introduce gaps.
+    """
+    grouped_data = group_by_sensor_position(data)
+    plot_grouped_data(grouped_data, channel_names, gap_threshold_duration, False)
 

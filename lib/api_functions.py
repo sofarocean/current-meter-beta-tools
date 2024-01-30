@@ -67,10 +67,11 @@ def fetch_and_decode_sensor_data(spotter_id, api_token, start_date=None, end_dat
 
 def fetch_and_decode_beta2_data(spotter_id, api_token, start_date=None, end_date=None):
     api_response = fetch_sensor_data(spotter_id, api_token, start_date, end_date)
-    print(json.dumps(api_response, indent=4))
     grouped_location_data = group_sensor_data(api_response['data'])
     formatted_data = format_data_for_plotting(grouped_location_data)
-    return formatted_data
+    return {
+        "data": formatted_data
+    }
 
 if __name__ == "__main__":
     # Sample usage
