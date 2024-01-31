@@ -47,8 +47,10 @@ This script demonstrates for DVT1 systems: retrieving data from the API, decodin
 
 ### beta2_api_tester.py
 This script demonstrates for Beta 2 systems: retrieving data from the API and plotting the data in `matplotlib`.
+- Example usage: ```python beta2_api_tester.py <YOUR_SPOTTER_ID> <YOUR_API_TOKEN> -s 2024-01-30T16:00Z -e 2024-01-30T21:00Z```
+- For a description of Command Line arguments: ```python beta2_api_tester.py --help```
 
 ### TODOs
-- [ ] Add support for SD card parsing and plotting.
-- [ ] Add paging to api_functions for improved performance for long time spans.
-- [ ] Add saving and loading of generated data, plots, and API response data.
+- [ ] Add support for SD card parsing and plotting?
+- [ ] Add paging to api_functions for improved performance for long time spans?
+- [ ] Add saving and loading of generated data, plots, and API response data to files?

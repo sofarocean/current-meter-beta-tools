@@ -34,10 +34,10 @@ DVT1_DATA_CHANNELS = [
 
 # Anderaa Adapter Beta 2 Data Channels
 BETA_2_DATA_CHANNELS = [
+    "Temperature[ºC]",
     "Abs Speed[cm/s]",
     "Direction[Deg.M]",
-    "Abs Tilt[Deg]",
-    "Temperature[ºC]"
+    "Abs Tilt[Deg]"
 ]
 
 # Sample Hex Payload
