@@ -9,8 +9,12 @@
 # -------------------------------------------------------------------------------
 
 from itertools import groupby
+import logging
 from math import degrees
 from operator import itemgetter
+
+# Configure logging (this is a basic configuration, adjust as needed)
+logging.basicConfig(level=logging.INFO)
 
 def group_sensor_data(data):
     """
@@ -78,6 +82,11 @@ def format_data_for_plotting(data):
             sample_values_dict = {}
             for sample_value in located_datum['sample_values']:
                 sample_values_dict[sample_value['data_type_name']] = sample_value
+
+            if 'aanderaa_abs_speed_mean_15bits' not in sample_values_dict and degrees(sample_values_dict['aanderaa_abs_tilt_mean_8bits']['value']) > 75.0:
+                print(f"Sensor {located_datum['sensorPosition']} horizontal at {located_datum['timestamp']}")
+                continue
+
             located_datum['decoded_value'] = [
                  {
                     "data": {
@@ -113,6 +122,7 @@ def format_data_for_plotting(data):
             ]
         except Exception as e:
             print(f"Could not format data for sensor {located_datum['sensorPosition']}, at {located_datum['timestamp']}")
-            raise(e)
+            logging.error(f"Error: {e}", exc_info = True)
+            continue
     return data
 
