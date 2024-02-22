@@ -50,6 +50,9 @@ This script demonstrates for Beta 2 systems: retrieving data from the API and pl
 - Example usage: ```python beta2_api_tester.py <YOUR_SPOTTER_ID> <YOUR_API_TOKEN> -s 2024-01-30T16:00Z -e 2024-01-30T21:00Z```
 - For a description of Command Line arguments: ```python beta2_api_tester.py --help```
 
+### rbr_coda_bin_decode_tester.py
+Decode raw binary payloads from Feb '24 DVT RBR Coda temperature and pressure modules.
+
 ### TODOs
 - [ ] Add support for SD card parsing and plotting?
 - [ ] Add paging to api_functions for improved performance for long time spans?
