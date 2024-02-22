@@ -3,4 +3,5 @@ requests
 datetime
 iso8601
 matplotlib
+mplcursors
 numpy
