@@ -57,7 +57,10 @@ def extract_channel_data(data: list, channel_name: str, gap_threshold_duration: 
                 max_values.append(channel_stats['max'])
             if 'stdev' in channel_stats:
                 std_values.append(channel_stats['stdev'])
-            n_readings_values.append(channel_stats['sample_count'])
+            if 'sample_count' in channel_stats:
+                n_readings_values.append(channel_stats['sample_count'])
+            else:
+                n_readings_values.append([np.nan, np.nan])
 
         last_timestamp = timestamp
 

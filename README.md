@@ -53,6 +53,9 @@ This script demonstrates for Beta 2 systems: retrieving data from the API and pl
 ### rbr_coda_bin_decode_tester.py
 Decode raw binary payloads from Feb '24 DVT RBR Coda temperature and pressure modules.
 
+### soft_api_tester.py
+Retrieves Feb '24 DVT SOFT module temperature data and plots it in `matplotlib`.
+
 ### TODOs
 - [ ] Add support for SD card parsing and plotting?
 - [ ] Add paging to api_functions for improved performance for long time spans?

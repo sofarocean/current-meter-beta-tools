@@ -12,7 +12,7 @@ import json
 import re
 import requests
 
-from lib.beta2_data import group_sensor_data, format_data_for_plotting
+from lib.beta2_data import group_sensor_data, format_data_for_plotting, format_soft_data_for_plotting
 from lib.binary_decoder import decode_payload_to_structs, DVT1_DATA_CHANNELS, DVT1_STRUCT_DESCRIPTION
 
 
@@ -65,13 +65,23 @@ def fetch_and_decode_sensor_data(spotter_id, api_token, start_date=None, end_dat
             continue
     return api_response
 
-def fetch_and_decode_beta2_data(spotter_id, api_token, start_date=None, end_date=None):
+
+def fetch_and_group_beta2_data(spotter_id, api_token, start_date=None, end_date=None):
     api_response = fetch_sensor_data(spotter_id, api_token, start_date, end_date)
-    grouped_location_data = group_sensor_data(api_response['data'])
+    return group_sensor_data(api_response['data'])
+
+
+def fetch_and_decode_beta2_data(spotter_id, api_token, start_date=None, end_date=None):
+    grouped_location_data = fetch_and_group_beta2_data(spotter_id, api_token, start_date, end_date)
     formatted_data = format_data_for_plotting(grouped_location_data)
-    return {
-        "data": formatted_data
-    }
+    return {"data": formatted_data}
+
+
+def fetch_and_decode_soft_data(spotter_id, api_token, start_date=None, end_date=None):
+    grouped_location_data = fetch_and_group_beta2_data(spotter_id, api_token, start_date, end_date)
+    formatted_data = format_soft_data_for_plotting(grouped_location_data)
+    return {"data": formatted_data}
+
 
 if __name__ == "__main__":
     # Sample usage

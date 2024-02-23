@@ -83,8 +83,17 @@ def format_data_for_plotting(data):
             for sample_value in located_datum['sample_values']:
                 sample_values_dict[sample_value['data_type_name']] = sample_value
 
-            if 'aanderaa_abs_speed_mean_15bits' not in sample_values_dict and degrees(sample_values_dict['aanderaa_abs_tilt_mean_8bits']['value']) > 75.0:
+            if (
+                "aanderaa_abs_speed_mean_15bits" not in sample_values_dict
+                and "aanderaa_abs_tilt_mean_8bits" in sample_values_dict
+                and degrees(sample_values_dict["aanderaa_abs_tilt_mean_8bits"]["value"])
+                > 75.0
+            ):
                 print(f"Sensor {located_datum['sensorPosition']} horizontal at {located_datum['timestamp']}")
+                continue
+            elif "aanderaa_abs_tilt_mean_8bits" not in sample_values_dict:
+                position, timestamp = located_datum["sensorPosition"], located_datum["timestamp"]
+                print(f"Sensor {position} has no tilt data at {timestamp}")
                 continue
 
             located_datum['decoded_value'] = [
@@ -126,3 +135,31 @@ def format_data_for_plotting(data):
             continue
     return data
 
+def format_soft_data_for_plotting(data):
+    """Format SOFT module data for plotting purposes."""
+    for located_datum in data:
+        try:
+            sample_values_dict = {}
+            for sample_value in located_datum["sample_values"]:
+                sample_values_dict[sample_value["data_type_name"]] = sample_value
+
+            if "bm_soft_temperature_mean_13bits" not in sample_values_dict:
+                continue
+
+            located_datum["decoded_value"] = [
+                {
+                    "data": {
+                        "mean": sample_values_dict["bm_soft_temperature_mean_13bits"][
+                            "value"
+                        ],
+                    },
+                    "channel_name": "Temperature[ºC]",
+                }
+            ]
+        except Exception as e:
+            print(
+                f"Could not format data for sensor {located_datum['sensorPosition']}, at {located_datum['timestamp']}"
+            )
+            logging.error(f"Error: {e}", exc_info=True)
+            continue
+    return data
