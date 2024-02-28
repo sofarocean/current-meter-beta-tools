@@ -60,7 +60,7 @@ def extract_channel_data(data: list, channel_name: str, gap_threshold_duration: 
             if 'sample_count' in channel_stats:
                 n_readings_values.append(channel_stats['sample_count'])
             else:
-                n_readings_values.append([np.nan, np.nan])
+                n_readings_values.append(np.nan)
 
         last_timestamp = timestamp
 
